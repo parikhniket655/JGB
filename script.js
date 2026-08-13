@@ -795,7 +795,8 @@ document.addEventListener('DOMContentLoaded', () => {
             execution: 7,
             capital: 9,
             risk: 7,
-            isCustom: false
+            isCustom: false,
+            type: "Growth"
         },
         {
             id: 2,
@@ -808,7 +809,8 @@ document.addEventListener('DOMContentLoaded', () => {
             execution: 8,
             capital: 8,
             risk: 7,
-            isCustom: false
+            isCustom: false,
+            type: "Growth"
         },
         {
             id: 3,
@@ -821,7 +823,8 @@ document.addEventListener('DOMContentLoaded', () => {
             execution: 8,
             capital: 4,
             risk: 7,
-            isCustom: false
+            isCustom: false,
+            type: "Core"
         },
         {
             id: 4,
@@ -834,7 +837,8 @@ document.addEventListener('DOMContentLoaded', () => {
             execution: 8,
             capital: 8,
             risk: 8,
-            isCustom: false
+            isCustom: false,
+            type: "Core"
         },
         {
             id: 5,
@@ -847,7 +851,8 @@ document.addEventListener('DOMContentLoaded', () => {
             execution: 7,
             capital: 8,
             risk: 8,
-            isCustom: false
+            isCustom: false,
+            type: "Growth"
         }
     ];
 
@@ -935,8 +940,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td><input type="number" min="1" max="10" value="${opp.capital}" class="score-input" data-opp-id="${opp.id}" data-factor="capital"></td>
                 <td><input type="number" min="1" max="10" value="${opp.risk}" class="score-input" data-opp-id="${opp.id}" data-factor="risk"></td>
                 <td class="col-score">${opp.totalScore}</td>
+                <td>
+                    <span class="slide-badge ${opp.type === 'Core' ? 'blue' : 'gold'}" style="margin: 0; font-size: 0.75rem; padding: 4px 8px; display: inline-block;">${opp.type}</span>
+                </td>
                 <td class="no-print">
-                    ${opp.isCustom ? `<button class="btn-delete" data-opp-id="${opp.id}"><svg class="icon-delete" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>` : `<span style="color:var(--text-muted);font-size:0.8rem;">Core</span>`}
+                    ${opp.isCustom ? `<button class="btn-delete" data-opp-id="${opp.id}"><svg class="icon-delete" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>` : `<span style="color:var(--text-muted);font-size:0.75rem;">—</span>`}
                 </td>
             `;
             opportunitiesTableBody.appendChild(tr);
@@ -984,6 +992,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = newOppNameInput.value.trim();
         if (!name) return;
         
+        const typeSelect = document.getElementById('new-opp-type');
+        const type = typeSelect ? typeSelect.value : 'Growth';
+        
         const newOpp = {
             id: Date.now(),
             name: name,
@@ -995,7 +1006,8 @@ document.addEventListener('DOMContentLoaded', () => {
             execution: 5,
             capital: 5,
             risk: 5,
-            isCustom: true
+            isCustom: true,
+            type: type
         };
         
         opportunities.push(newOpp);

@@ -254,6 +254,7 @@
                                     <th>Capital Eff (5%)</th>
                                     <th>Risk Mitig (5%)</th>
                                     <th class="col-score">Opportunity Score</th>
+                                    <th>Type</th>
                                     <th class="no-print">Actions</th>
                                 </tr>
                             </thead>
@@ -267,6 +268,10 @@
                         <h3>Add Custom Growth Initiative</h3>
                         <div class="form-row">
                             <input type="text" id="new-opp-name" placeholder="Initiative Name (e.g. Expand JCS to Middle East)" class="form-input">
+                            <select id="new-opp-type" class="form-input" style="flex-grow: 0; width: 120px; background: rgba(255, 255, 255, 0.03); color: white; border: 1px solid var(--border-color); cursor: pointer;">
+                                <option value="Growth" style="background:#13151a;">Growth</option>
+                                <option value="Core" style="background:#13151a;">Core</option>
+                            </select>
                             <button class="btn" id="btn-add-opp"><svg class="icon" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>Add Opportunity</button>
                         </div>
                     </div>
