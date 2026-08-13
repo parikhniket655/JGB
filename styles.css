@@ -1527,6 +1527,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #e2e8f0 !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
     color: #1e293b !important;
+    padding: 24px 36px !important; /* Reduced vertical padding to prevent overflow */
 }
 
 /* Slide header & branding */
@@ -1545,15 +1546,20 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif !important;
     font-weight: 700 !important;
     letter-spacing: -0.02em !important;
+    font-size: 1.8rem !important; /* Slightly more compact titles */
 }
 
 .slide-subtitle {
     color: #475569 !important; /* slate grey subtitle */
     font-weight: 400 !important;
-    font-size: 0.95rem !important;
+    font-size: 0.85rem !important; /* Slightly more compact subtitle */
 }
 
 /* Slide Body elements */
+.slide-body {
+    margin: 12px 0 !important; /* Compact body margins */
+}
+
 .slide-body p {
     color: #475569 !important;
 }
@@ -1598,6 +1604,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #e2e8f0 !important;
     color: #334155 !important;
     box-shadow: none !important;
+    padding: 12px 16px !important; /* Slightly more compact padding */
 }
 
 .slide-card-visual:hover {
@@ -1611,10 +1618,21 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600 !important;
     text-transform: none !important;
     letter-spacing: normal !important;
+    font-size: 0.9rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 4px !important;
 }
 
 .slide-card-visual p {
     color: #475569 !important;
+    font-size: 0.76rem !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+}
+
+.slide-card-visual li {
+    font-size: 0.74rem !important;
+    line-height: 1.35 !important;
 }
 
 /* Custom highlighted cards */
