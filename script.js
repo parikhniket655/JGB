@@ -318,27 +318,27 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             title: "Cross-Business Synergy #1: Recruitment SaaS",
-            subtitle: "AI-Powered HR Tech for High-Volume B2B Hiring",
-            presenterNotes: "Rather than starting a new tech venture from scratch, we build HR Tech. JCS provides the engineering, Aequalis provides the customer relationships and domain validation. Aequalis Global acts as the design partner and distributes the product to its existing enterprise customer base, bypassing early customer acquisition hurdles.",
+            subtitle: "Proprietary AI Product Built by JCS, Distributed by Aequalis",
+            presenterNotes: "Instead of Aequalis paying monthly fees to external ATS/CRM companies, we pivot JBG into a software owner. JCS builds a proprietary recruitment automation system, Aequalis acts as the expert designer, and we sell this tool directly as a SaaS product to Aequalis's existing corporate client base, converting low-margin recruiting hours into recurring software license revenues.",
             content: `
                 <div style="display:flex; flex-direction:column; gap:20px; width:100%;">
                     <div class="slide-grid-3" style="flex-grow:1;">
                         <div class="slide-card-visual" style="padding:20px;">
-                            <span class="slide-badge blue" style="margin-bottom:12px;">Asset Leverage</span>
-                            <h4>Core Capabilities</h4>
+                            <span class="slide-badge blue" style="margin-bottom:12px;">The Synergy Pool</span>
+                            <h4>Core Leverage</h4>
                             <ul style="list-style:none; padding:0; margin:8px 0 0 0; display:flex; flex-direction:column; gap:8px; font-size:0.8rem; color:var(--text-muted);">
-                                <li>• <strong>Aequalis global networks:</strong> Immediate, warm distribution to 100+ active enterprise HR clients.</li>
-                                <li>• <strong>JCS developer bandwidth:</strong> Internal engineering talent ready to build proprietary IP.</li>
-                                <li>• <strong>Domain workflows:</strong> Recruiter expertise used to design the candidate matching logic.</li>
+                                <li>• <strong>Aequalis enterprise database:</strong> Immediate warm distribution to 100+ active recruitment clients.</li>
+                                <li>• <strong>JCS engineering team:</strong> Internal bandwidth to build and own proprietary IP.</li>
+                                <li>• <strong>Domain workflow insights:</strong> Sourcing expertise used to design the resume matching algorithms.</li>
                             </ul>
                         </div>
                         <div class="slide-card-visual" style="padding:20px; border-color:rgba(230, 25, 60, 0.2);">
-                            <span class="slide-badge highlight" style="margin-bottom:12px; background:#ffe4e6; color:#be123c;">AI Product</span>
-                            <h4>HR Tech Solution</h4>
+                            <span class="slide-badge highlight" style="margin-bottom:12px; background:#ffe4e6; color:#be123c;">IP Ownership</span>
+                            <h4>Own vs. Buy Solution</h4>
                             <ul style="list-style:none; padding:0; margin:8px 0 0 0; display:flex; flex-direction:column; gap:8px; font-size:0.8rem; color:var(--text-muted);">
-                                <li>• <strong>AI-resume screening:</strong> Matches resumes against job briefs to rank candidates.</li>
-                                <li>• <strong>Zero-CAC distribution:</strong> Marketed as a value-add module directly to Aequalis global contract clients.</li>
-                                <li>• <strong>SaaS licensing model:</strong> Converts service fee revenue to recurring SaaS licenses.</li>
+                                <li>• <strong>Own the software IP:</strong> Pivot Aequalis from a software-purchasing customer to a proprietary software owner.</li>
+                                <li>• <strong>B2B SaaS product:</strong> License the screening software directly to B2B clients on monthly subscriptions.</li>
+                                <li>• <strong>AI-resume screening:</strong> Vets high-volume candidate files against job listings in seconds.</li>
                             </ul>
                         </div>
                         <div class="slide-card-visual" style="padding:20px; display:flex; flex-direction:column; justify-content:space-between;">
@@ -349,14 +349,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span class="label">LTV : CAC Ratio</span>
                             </div>
                             <p style="font-size:0.75rem; color:var(--text-muted); text-align:center; margin:0; line-height:1.35;">
-                                Industry standard is 3.0x. Enabled by Aequalis's zero-cost customer acquisition channel.
+                                High margins enabled by using Aequalis's direct customer network, bypassing digital ad spend.
                             </p>
                         </div>
                     </div>
                     <div class="slide-card-visual" style="padding:16px 24px; background:rgba(15,37,55,0.02); display:flex; align-items:center; gap:16px;">
                         <span class="slide-badge highlight" style="background:#e0f2fe; color:#0369a1; margin:0; font-weight:800; font-size:0.8rem; padding:6px 12px;">Strategic Impact</span>
                         <p style="font-size:0.85rem; margin:0; line-height:1.4; color:var(--text-muted);">
-                            Combining software build capabilities with executive client relationships converts a transactional placing agency into a <strong>scalable vertical HR technology enterprise</strong>.
+                            Pivoting from standard hiring fees to owning the software stack converts Jithvar into a <strong>scalable, high-margin HR technology vendor</strong>.
                         </p>
                     </div>
                 </div>
@@ -370,21 +370,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div style="display:flex; flex-direction:column; gap:20px; width:100%;">
                     <div class="slide-grid-3" style="flex-grow:1;">
                         <div class="slide-card-visual" style="padding:20px;">
-                            <span class="slide-badge blue" style="margin-bottom:12px;">Asset Leverage</span>
-                            <h4>Core Capabilities</h4>
+                            <span class="slide-badge blue" style="margin-bottom:12px;">The Synergy Pool</span>
+                            <h4>Core Leverage</h4>
                             <ul style="list-style:none; padding:0; margin:8px 0 0 0; display:flex; flex-direction:column; gap:8px; font-size:0.8rem; color:var(--text-muted);">
-                                <li>• <strong>Solar installations footprint:</strong> Nature Grid's physical C&I installations serve as hardware nodes.</li>
-                                <li>• <strong>Cloud telemetry software:</strong> JCS backend developer team sets up dashboard data lakes.</li>
-                                <li>• <strong>Client relationship database:</strong> Ongoing touchpoints for onsite power generation logs.</li>
+                                <li>• <strong>Physical Installations footprint:</strong> Nature Grid's physical C&I installations act as our proprietary hardware channels.</li>
+                                <li>• <strong>Cloud telemetry software:</strong> JCS builds the software stack and database metrics.</li>
+                                <li>• <strong>Ongoing client logs:</strong> Captures critical solar generation and carbon credits data.</li>
                             </ul>
                         </div>
                         <div class="slide-card-visual" style="padding:20px; border-color:rgba(230, 25, 60, 0.2);">
-                            <span class="slide-badge highlight" style="margin-bottom:12px; background:#ffe4e6; color:#be123c;">IoT Product</span>
-                            <h4>Telemetry Solution</h4>
+                            <span class="slide-badge highlight" style="margin-bottom:12px; background:#ffe4e6; color:#be123c;">IP Ownership</span>
+                            <h4>Own the Solar Stack</h4>
                             <ul style="list-style:none; padding:0; margin:8px 0 0 0; display:flex; flex-direction:column; gap:8px; font-size:0.8rem; color:var(--text-muted);">
-                                <li>• <strong>Real-time generation dashboard:</strong> Client app to track solar output and carbon credits.</li>
-                                <li>• <strong>Predictive maintenance alerts:</strong> System triggers notifications for panel dirt/degradation.</li>
-                                <li>• <strong>O&M service retainer contracts:</strong> Bundles O&M contracts to secure recurring servicing fees.</li>
+                                <li>• <strong>Proprietary Energy Dashboard:</strong> Jithvar owns the software product rather than using general dashboards.</li>
+                                <li>• <strong>O&M service retainer contracts:</strong> Combines digital tracking with physical O&M team contracts.</li>
+                                <li>• <strong>Predictive degradation alerts:</strong> Software warns clients before energy outputs drop.</li>
                             </ul>
                         </div>
                         <div class="slide-card-visual" style="padding:20px; display:flex; flex-direction:column; justify-content:space-between;">
@@ -421,7 +421,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span class="slide-badge" style="background:#e2e8f0; color:#475569;">20% Margin</span>
                             </div>
                             <p style="font-size:0.85rem; line-height:1.5; color:var(--text-muted); margin-bottom:12px;">
-                                <strong>Custom Service Delivery Cap:</strong> Every project requires unique, from-scratch software builds, locking developer resources.
+                                <strong>Tailored Services ("Custom Tailor"):</strong> Every client project requires unique, from-scratch software builds, locking developer resources.
                             </p>
                             <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:0.8rem; color:var(--text-muted);">
                                 <li>• Billable hours directly limit revenue scalability and growth speed.</li>
@@ -435,12 +435,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span class="slide-badge highlight" style="background:#dcfce7; color:#16a34a;">45%+ Margin</span>
                             </div>
                             <p style="font-size:0.85rem; line-height:1.5; color:var(--text-muted); margin-bottom:12px;">
-                                <strong>Reusable Codebases & SaaS Integration Assets:</strong> Productize custom integration code (Salesforce, CRM, APIs) into modular templates.
+                                <strong>Modular Software Assets ("Ready-to-Wear"):</strong> Build proprietary, reusable integration templates (Salesforce, CRM, APIs) owned by Jithvar.
                             </p>
                             <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:0.8rem; color:var(--text-muted);">
                                 <li>• Decouples group revenue from engineering headcount limitations.</li>
                                 <li>• Accelerated time-to-value for B2B clients using standardized builds.</li>
-                                <li>• Converts low-margin services into high-margin proprietary software.</li>
+                                <li>• Converts low-margin services into high-margin proprietary software licensing.</li>
                             </ul>
                         </div>
                     </div>
