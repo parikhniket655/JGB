@@ -20,6 +20,7 @@
             <button class="nav-btn" data-tab="calculator" id="tab-calculator"><svg class="icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Prioritizer</button>
             <button class="nav-btn" data-tab="memo" id="tab-memo"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>Executive Memo</button>
             <button class="nav-btn" data-tab="analysis" id="tab-analysis"><svg class="icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Supporting Analysis</button>
+            <button class="nav-btn" data-tab="prototypes" id="tab-prototypes"><svg class="icon" viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z"/></svg>Prototypes</button>
         </nav>
         <div class="header-actions">
             <button class="btn btn-secondary" onclick="window.print()"><svg class="icon" viewBox="0 0 24 24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>Export PDF</button>
@@ -447,6 +448,259 @@
                 </table>
             </div>
         </section>
+        <!-- TAB 6: SOLUTIONS PROTOTYPES -->
+        <section id="content-prototypes" class="tab-content">
+            <div class="dashboard-hero">
+                <h1>Interactive Solution Prototypes</h1>
+                <p>Live functional simulators demonstrating JBG's proprietary technology products and transition from service-based delivery to high-margin software IP.</p>
+            </div>
+
+            <!-- Prototype Sub-Navigation -->
+            <div class="proto-nav no-print" style="display:flex; gap:12px; margin-bottom:24px; border-bottom:1px solid var(--border-color); padding-bottom:12px;">
+                <button class="btn btn-secondary proto-tab-btn active" data-proto="recruitment">1. Recruitment AI Simulator</button>
+                <button class="btn btn-secondary proto-tab-btn" data-proto="telemetry">2. Solar Telemetry IoT</button>
+                <button class="btn btn-secondary proto-tab-btn" data-proto="marketplace">3. JCS Template Marketplace</button>
+            </div>
+
+            <!-- SUB-TAB 1: RECRUITMENT AI -->
+            <div id="proto-content-recruitment" class="proto-tab-content active">
+                <div class="dashboard-grid">
+                    <div class="card" style="grid-column: span 1;">
+                        <h2>AI Screening Input</h2>
+                        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">
+                            Select a mock candidate to pre-populate resume details, or customize the inputs to test JBG's screening capabilities.
+                        </p>
+                        
+                        <div style="margin-bottom:16px;">
+                            <label style="display:block; font-size:0.8rem; margin-bottom:6px; font-weight:600; color:var(--color-primary);">Select Candidate Profile</label>
+                            <select id="screening-candidate-persona" class="form-input" style="width:100%; background:#13151a; border:1px solid var(--border-color); cursor:pointer;">
+                                <option value="engineer">Amit Patel - Senior Fullstack Engineer (Tech Match)</option>
+                                <option value="sales">Sarah D'Souza - B2B Sales Executive (Commercial Match)</option>
+                                <option value="poor">Rajesh Kumar - Entry Level Intern (Weak Profile Match)</option>
+                            </select>
+                        </div>
+
+                        <div style="margin-bottom:16px;">
+                            <label style="display:block; font-size:0.8rem; margin-bottom:6px; font-weight:600; color:var(--color-primary);">Candidate Resume Contents</label>
+                            <textarea id="screening-resume-text" class="form-input" style="width:100%; height:150px; background:#13151a; border:1px solid var(--border-color); font-family:monospace; font-size:0.75rem; line-height:1.4; resize:none;"></textarea>
+                        </div>
+
+                        <div style="margin-bottom:16px;">
+                            <label style="display:block; font-size:0.8rem; margin-bottom:6px; font-weight:600; color:var(--color-primary);">Job Requirements Profile</label>
+                            <textarea id="screening-job-text" class="form-input" style="width:100%; height:80px; background:#13151a; border:1px solid var(--border-color); font-family:monospace; font-size:0.75rem; line-height:1.4; resize:none;"></textarea>
+                        </div>
+
+                        <button class="btn" id="btn-run-screening" style="width:100%; justify-content:center;"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Run AI Sourcing Assessment</button>
+                    </div>
+
+                    <div class="card" style="grid-column: span 1; display:flex; flex-direction:column; justify-content:space-between;" id="screening-results-panel">
+                        <h2>AI Screening Verdict</h2>
+                        
+                        <div id="screening-placeholder" style="flex-grow:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:40px; color:var(--text-muted);">
+                            <svg class="icon" viewBox="0 0 24 24" style="width:48px; height:48px; margin-bottom:16px; opacity:0.3;"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                            <p style="margin:0; font-size:0.9rem;">Awaiting Candidate Data...</p>
+                            <p style="margin:4px 0 0 0; font-size:0.8rem; opacity:0.7;">Click "Run AI Sourcing Assessment" to simulate JBG's screening models.</p>
+                        </div>
+
+                        <div id="screening-loader" style="display:none; flex-grow:1; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:40px;">
+                            <div class="spinner" style="border: 4px solid rgba(255,255,255,0.1); width: 40px; height: 40px; border-radius: 50%; border-left-color: var(--color-primary); animation: spin 1s linear infinite; margin-bottom:16px;"></div>
+                            <p id="screening-status-text" style="font-size:0.9rem; color:var(--text-main); font-weight:600; margin:0;">Parsing Candidate Profile...</p>
+                            <div style="width:200px; height:4px; background:rgba(255,255,255,0.05); border-radius:2px; margin-top:12px; overflow:hidden; position:relative;">
+                                <div id="screening-progress-bar" style="position:absolute; top:0; left:0; height:100%; background:var(--color-primary); width:0%; transition: width 0.3s ease;"></div>
+                            </div>
+                        </div>
+
+                        <div id="screening-results" style="display:none; flex-grow:1; flex-direction:column; gap:16px;">
+                            <div style="display:flex; align-items:center; gap:20px; border-bottom:1px solid var(--border-color); padding-bottom:16px; margin-top:8px;">
+                                <div style="position:relative; width:80px; height:80px; display:flex; justify-content:center; align-items:center; border: 4px solid var(--border-color); border-radius:50%;" id="screening-score-ring">
+                                    <span id="screening-score" style="font-size:1.6rem; font-weight:800; color:var(--color-primary);">87%</span>
+                                </div>
+                                <div>
+                                    <span id="screening-badge" class="slide-badge" style="margin:0 0 6px 0; display:inline-block; font-size:0.75rem; font-weight:700;">HIGH MATCH</span>
+                                    <h3 id="screening-verdict-title" style="margin:0; font-size:1.1rem; color:white;">Proceed to Technical Interview</h3>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 style="font-size:0.85rem; color:var(--color-primary); margin-bottom:8px;">Identified Match Factors</h4>
+                                <ul id="screening-factors-list" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; font-size:0.8rem;">
+                                    <!-- Dynamic -->
+                                </ul>
+                            </div>
+
+                            <div class="slide-card-visual" style="padding:12px 16px; background:rgba(22,163,74,0.05); border-color:rgba(22,163,74,0.15); margin:0;">
+                                <h4 style="margin:0 0 4px 0; color:#16a34a; font-size:0.85rem;">⚡ JBG Platform Economics Benefit</h4>
+                                <p style="font-size:0.78rem; margin:0; line-height:1.4; color:var(--text-muted);" id="screening-economics-benefit">
+                                    This initial assessment took 1.5 seconds, saving <strong>45 minutes of recruiter billing time ($25 equivalent)</strong>. Scaled across JBG's database, this yields over $120k/yr in labor savings.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUB-TAB 2: SOLAR TELEMETRY IoT -->
+            <div id="proto-content-telemetry" class="proto-tab-content" style="display:none;">
+                <div class="dashboard-grid">
+                    <!-- Live Analytics Panel -->
+                    <div class="card card-wide" style="display:flex; flex-direction:column; gap:20px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <div>
+                                <h2>Real-time IoT Telemetry Monitor</h2>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">Asset Node: Jithvar HQ Array #NG-8802</span>
+                            </div>
+                            <span class="slide-badge blue" id="telemetry-status-badge" style="margin:0; font-weight:800; font-size:0.8rem; padding:6px 12px;">SYSTEM OPERATIONAL</span>
+                        </div>
+
+                        <!-- Live Telemetry KPI Metrics -->
+                        <div class="bu-grid" style="grid-template-columns: repeat(4, 1fr); gap:12px;">
+                            <div class="bu-card" style="padding:14px; text-align:center;">
+                                <span style="font-size:0.75rem; color:var(--text-muted); display:block; margin-bottom:4px;">Current Generation</span>
+                                <span style="font-size:1.6rem; font-weight:800; color:var(--color-primary);" id="telemetry-current-kw">42.8 kW</span>
+                            </div>
+                            <div class="bu-card" style="padding:14px; text-align:center;">
+                                <span style="font-size:0.75rem; color:var(--text-muted); display:block; margin-bottom:4px;">Energy Output Today</span>
+                                <span style="font-size:1.6rem; font-weight:800; color:white;" id="telemetry-total-kwh">312.4 kWh</span>
+                            </div>
+                            <div class="bu-card" style="padding:14px; text-align:center;">
+                                <span style="font-size:0.75rem; color:var(--text-muted); display:block; margin-bottom:4px;">CO2 Offset Contribution</span>
+                                <span style="font-size:1.6rem; font-weight:800; color:var(--success-color);" id="telemetry-co2-kg">243.6 kg</span>
+                            </div>
+                            <div class="bu-card" style="padding:14px; text-align:center; cursor:pointer;" id="telemetry-billing-status">
+                                <span style="font-size:0.75rem; color:var(--text-muted); display:block; margin-bottom:4px;">Active Retainer Rate</span>
+                                <span style="font-size:1.4rem; font-weight:800; color:#eab308;">$450/month</span>
+                            </div>
+                        </div>
+
+                        <!-- SVG Live Generation Chart -->
+                        <div style="background:#13151a; padding:16px; border-radius:var(--border-radius-md); border:1px solid var(--border-color);">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                                <span style="font-size:0.8rem; font-weight:600; color:var(--color-primary);">Live Generation Curve (kW over time)</span>
+                                <div style="display:flex; align-items:center; gap:6px;">
+                                    <span style="display:inline-block; width:8px; height:8px; background:var(--color-primary); border-radius:50%; animation: pulse 1.5s infinite;"></span>
+                                    <span style="font-size:0.75rem; color:var(--text-muted);">Telemetry Data Stream Active</span>
+                                </div>
+                            </div>
+                            <!-- Mock chart placeholder via dynamic SVG path -->
+                            <div style="height: 150px; width: 100%; position:relative;">
+                                <svg width="100%" height="150" viewBox="0 0 800 150" preserveAspectRatio="none" style="display:block;">
+                                    <!-- Grid lines -->
+                                    <line x1="0" y1="30" x2="800" y2="30" stroke="#222" stroke-dasharray="2"/>
+                                    <line x1="0" y1="75" x2="800" y2="75" stroke="#222" stroke-dasharray="2"/>
+                                    <line x1="0" y1="120" x2="800" y2="120" stroke="#222" stroke-dasharray="2"/>
+                                    
+                                    <!-- Filled area under the curve -->
+                                    <path id="chart-area-path" d="M0,150 L50,110 L100,105 L150,115 L200,95 L250,90 L300,100 L350,95 L400,85 L450,95 L500,90 L550,85 L600,75 L650,80 L700,75 L750,78 L800,78 L800,150 Z" fill="rgba(230,25,60,0.05)" stroke="none"/>
+                                    <!-- The curve itself -->
+                                    <path id="chart-curve-path" d="M0,150 L50,110 L100,105 L150,115 L200,95 L250,90 L300,100 L350,95 L400,85 L450,95 L500,90 L550,85 L600,75 L650,80 L700,75 L750,78 L800,78" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Simulation Controls -->
+                        <div class="slide-grid-2" style="gap:16px;">
+                            <div class="slide-card-visual" style="padding:16px; display:flex; flex-direction:column; justify-content:center;">
+                                <h4 style="margin:0 0 6px 0; color:var(--text-main);">Operations Simulation Controls</h4>
+                                <p style="font-size:0.8rem; margin:0 0 12px 0; color:var(--text-muted);">
+                                    Simulate environment degradation (like dust/debris coverage) to test JBG's automated warning alerts and physical O&M dispatches.
+                                </p>
+                                <div style="display:flex; gap:12px;">
+                                    <button class="btn btn-secondary" id="btn-trigger-degradation" style="background:#451a03; color:#f97316; border-color:#f97316;">Simulate Dust Coverage</button>
+                                    <button class="btn" id="btn-dispatch-om" style="display:none; background:#14532d; color:#22c55e; border-color:#22c55e;">Dispatch O&M Cleaning Team</button>
+                                </div>
+                            </div>
+
+                            <div class="slide-card-visual" style="padding:16px; display:flex; flex-direction:column; justify-content:center; background:rgba(15,37,55,0.02);" id="telemetry-log-card">
+                                <h4 style="margin:0 0 6px 0; color:var(--color-primary);">System Action Logs</h4>
+                                <div style="font-family:monospace; font-size:0.75rem; color:var(--text-muted); line-height:1.4;" id="telemetry-system-logs">
+                                    [19:40:02] Connected to Telemetry Hub NG-8802.<br>
+                                    [19:40:02] Panel array check: 100% cells healthy. Generation active.<br>
+                                    [19:40:05] Monitoring carbon credits offset rates.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUB-TAB 3: JCS TEMPLATE MARKETPLACE -->
+            <div id="proto-content-marketplace" class="proto-tab-content" style="display:none;">
+                <div class="dashboard-grid">
+                    <div class="card card-wide">
+                        <h2>JCS Reusable Integration Template Assets</h2>
+                        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:20px;">
+                            Deploy ready-to-use software components to convert JCS from manual, custom-coded client billing to high-margin, template-based SaaS product delivery.
+                        </p>
+
+                        <div class="bu-grid" style="grid-template-columns: repeat(3, 1fr); gap:16px;">
+                            <!-- Template 1 -->
+                            <div class="slide-card-visual" style="padding:20px; display:flex; flex-direction:column; justify-content:space-between; border-top: 3px solid var(--color-primary);">
+                                <div>
+                                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                        <span class="slide-badge blue" style="margin:0;">CRM / API</span>
+                                        <span style="font-size:0.75rem; color:#eab308; font-weight:700;">$149/mo license</span>
+                                    </div>
+                                    <h3 style="font-size:1rem; color:white; margin:0 0 6px 0;">Salesforce CRM Sync Template</h3>
+                                    <p style="font-size:0.78rem; line-height:1.4; color:var(--text-muted); margin:0 0 12px 0;">
+                                        Syncs lead records, pipeline metrics, and invoices between Salesforce and AWS databases. Eliminates custom pipeline setup.
+                                    </p>
+                                    <div style="font-size:0.75rem; color:var(--color-primary); font-weight:600; margin-bottom:12px;">⚡ Saves: 80 hours of custom coding</div>
+                                </div>
+                                <button class="btn btn-deploy-template" data-template-id="salesforce" data-license="149" data-name="Salesforce CRM Sync" style="width:100%; justify-content:center;">Deploy Template MVP</button>
+                            </div>
+
+                            <!-- Template 2 -->
+                            <div class="slide-card-visual" style="padding:20px; display:flex; flex-direction:column; justify-content:space-between; border-top: 3px solid var(--color-primary);">
+                                <div>
+                                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                        <span class="slide-badge blue" style="margin:0;">FINTECH</span>
+                                        <span style="font-size:0.75rem; color:#eab308; font-weight:700;">$199/mo license</span>
+                                    </div>
+                                    <h3 style="font-size:1rem; color:white; margin:0 0 6px 0;">Multi-Tenant Stripe Billing Module</h3>
+                                    <p style="font-size:0.78rem; line-height:1.4; color:var(--text-muted); margin:0 0 12px 0;">
+                                        Stripe billing, webhooks, invoice pipelines, and recurring customer dashboard. Ready-to-deploy backend.
+                                    </p>
+                                    <div style="font-size:0.75rem; color:var(--color-primary); font-weight:600; margin-bottom:12px;">⚡ Saves: 120 hours of custom coding</div>
+                                </div>
+                                <button class="btn btn-deploy-template" data-template-id="stripe" data-license="199" data-name="Stripe Billing Module" style="width:100%; justify-content:center;">Deploy Template MVP</button>
+                            </div>
+
+                            <!-- Template 3 -->
+                            <div class="slide-card-visual" style="padding:20px; display:flex; flex-direction:column; justify-content:space-between; border-top: 3px solid var(--color-primary);">
+                                <div>
+                                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                                        <span class="slide-badge blue" style="margin:0;">DATABASE / IoT</span>
+                                        <span style="font-size:0.75rem; color:#eab308; font-weight:700;">$249/mo license</span>
+                                    </div>
+                                    <h3 style="font-size:1rem; color:white; margin:0 0 6px 0;">TimescaleDB Telemetry Ingestion</h3>
+                                    <p style="font-size:0.78rem; line-height:1.4; color:var(--text-muted); margin:0 0 12px 0;">
+                                        High-frequency telemetry stream ingestion pipeline using Redis cache queue and TimescaleDB data lakes.
+                                    </p>
+                                    <div style="font-size:0.75rem; color:var(--color-primary); font-weight:600; margin-bottom:12px;">⚡ Saves: 150 hours of custom coding</div>
+                                </div>
+                                <button class="btn btn-deploy-template" data-template-id="timescaledb" data-license="249" data-name="TimescaleDB Ingestion" style="width:100%; justify-content:center;">Deploy Template MVP</button>
+                            </div>
+                        </div>
+
+                        <!-- Mock Terminal Deployment Logs -->
+                        <div class="proto-terminal" id="prototype-terminal" style="margin-top:24px; display:none; background:#0a0c10; border:1px solid #334155; border-radius:var(--border-radius-md); overflow:hidden; font-family:monospace; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            <div class="terminal-header" style="background:#13151a; border-bottom:1px solid #334155; padding:8px 16px; display:flex; align-items:center; gap:8px;">
+                                <div style="display:flex; gap:6px;">
+                                    <span style="width:12px; height:12px; border-radius:50%; background:#ef4444; display:inline-block;"></span>
+                                    <span style="width:12px; height:12px; border-radius:50%; background:#f59e0b; display:inline-block;"></span>
+                                    <span style="width:12px; height:12px; border-radius:50%; background:#10b981; display:inline-block;"></span>
+                                </div>
+                                <span style="font-size:0.75rem; color:var(--text-muted); margin-left:12px;">JCS Cloud Deployment Shell v1.0.2</span>
+                            </div>
+                            <div class="terminal-body" id="terminal-body-content" style="padding:16px; max-height:220px; overflow-y:auto; font-size:0.8rem; line-height:1.5; color:#38bdf8;">
+                                <!-- Shell logs injected dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="main-footer no-print">

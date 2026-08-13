@@ -1262,3 +1262,313 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial table load and calculation
     calculateScores();
 });
+
+
+    // -------------------------------------------------------------
+    // 7. INTERACTIVE SOLUTION SIMULATORS & PROTOTYPES
+    // -------------------------------------------------------------
+    
+    // Prototype Sub-tab Switching
+    const protoTabButtons = document.querySelectorAll('.proto-tab-btn');
+    const protoTabContents = document.querySelectorAll('.proto-tab-content');
+
+    protoTabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const protoId = btn.getAttribute('data-proto');
+            
+            protoTabButtons.forEach(b => b.classList.remove('active'));
+            protoTabContents.forEach(c => c.style.display = 'none');
+            
+            btn.classList.add('active');
+            document.getElementById(`proto-content-${protoId}`).style.display = 'block';
+        });
+    });
+
+    // --- PROTOTYPE 1: RECRUITMENT AI SIMULATOR ---
+    const candidatePersonaSelect = document.getElementById('screening-candidate-persona');
+    const resumeTextInput = document.getElementById('screening-resume-text');
+    const jobTextInput = document.getElementById('screening-job-text');
+    const btnRunScreening = document.getElementById('btn-run-screening');
+    
+    const screeningPlaceholder = document.getElementById('screening-placeholder');
+    const screeningLoader = document.getElementById('screening-loader');
+    const screeningResults = document.getElementById('screening-results');
+    const screeningStatusText = document.getElementById('screening-status-text');
+    const screeningProgressBar = document.getElementById('screening-progress-bar');
+    
+    const screeningScore = document.getElementById('screening-score');
+    const screeningBadge = document.getElementById('screening-badge');
+    const screeningVerdictTitle = document.getElementById('screening-verdict-title');
+    const screeningFactorsList = document.getElementById('screening-factors-list');
+    const screeningEconomics = document.getElementById('screening-economics-benefit');
+
+    const candidateData = {
+        engineer: {
+            resume: "AMIT PATEL - Senior Fullstack Engineer\nEmail: amit.patel@email.com | Phone: +91 98765 43210\n\nSUMMARY:\nResourceful fullstack engineer with 6 years experience specializing in React, Node.js, TimescaleDB, and AWS cloud architecture. Experience building high-performance IoT dashboards and scale API pipelines.\n\nTECHNICAL SKILLS:\n- Frontend: React, Redux, TailwindCSS, Webpack\n- Backend: Node.js, Express, Go, Python\n- Databases: PostgreSQL, MongoDB, TimescaleDB, Redis\n- Cloud: AWS (S3, EC2, Lambda, ECS), Docker, CI/CD",
+            job: "Senior Developer to lead development of solar asset IoT analytics dashboard. Must have 5+ years experience. Stack: Node.js, React, databases (SQL/TimescaleDB), AWS cloud deployment.",
+            score: "92%",
+            badge: "EXCELLENT MATCH",
+            badgeClass: "blue",
+            verdict: "High-Fit Match. Shortlist immediately.",
+            factors: [
+                "✅ <strong>Role Sourcing Fit:</strong> 6 years experience matches the 5+ years requirement.",
+                "✅ <strong>Tech Stack Integration:</strong> Verified expert matching Node.js, React, and TimescaleDB.",
+                "✅ <strong>Industry Affinity:</strong> Past experience building IoT telemetry dashboards reduces training timeline."
+            ],
+            savings: "AI matching took 1.4s, saving <strong>45 minutes of manual resume vetting ($25 equivalent)</strong>."
+        },
+        sales: {
+            resume: "SARAH D'SOUZA - B2B Business Development Specialist\nEmail: sarah.dsouza@email.com\n\nSUMMARY:\nDriven commercial sales professional with 5 years experience selling enterprise SaaS subscription licenses to industrial mid-market accounts. Proven record exceeding $1M annual sales targets.\n\nSKILLS:\n- Inbound demand gen campaigns, B2B pipeline conversion, CRM logging (Salesforce), client negotiations.",
+            job: "Sales Account Executive to drive B2B customer acquisition and SaaS subscriptions for JBG’s new technology platform. Needs enterprise software pipeline experience.",
+            score: "85%",
+            badge: "HIGH MATCH",
+            badgeClass: "gold",
+            verdict: "Strong Match. Proceed to Phone Interview.",
+            factors: [
+                "✅ <strong>Domain Affinity:</strong> 5 years experience selling enterprise SaaS matches growth initiatives.",
+                "✅ <strong>Client Channels:</strong> Proven records selling to industrial manufacturing accounts.",
+                "❌ <strong>Technical Gap:</strong> General software profile; requires onboarding on technical telemetry stack."
+            ],
+            savings: "AI matching took 1.2s, saving <strong>35 minutes of recruiter screen labor ($18 equivalent)</strong>."
+        },
+        poor: {
+            resume: "RAJESH KUMAR - Undergraduate Student\nEmail: rajesh.k@email.com\n\nSUMMARY:\nRecent college student seeking an entry level summer internship. Keen interest in business strategy and exploring technologies.\n\nTECHNICAL PROJECTS:\n- Simple calculator app in HTML/CSS.\n- Personal blog template in WordPress.",
+            job: "Senior Developer to lead development of solar asset IoT analytics dashboard. Must have 5+ years experience. Stack: Node.js, React, databases (SQL/TimescaleDB), AWS cloud deployment.",
+            score: "34%",
+            badge: "WEAK FIT",
+            badgeClass: "grey",
+            verdict: "Unsuitable Candidate. Send Auto-Rejection Email.",
+            factors: [
+                "❌ <strong>Experience Gap:</strong> Zero professional years of experience (5+ years required).",
+                "❌ <strong>Tech Stack Deficit:</strong> No exposure to Node.js, React, TimescaleDB, or AWS Cloud databases.",
+                "❌ <strong>Role Mismatch:</strong> Entry-level intern candidate applied for Senior Leadership vacancy."
+            ],
+            savings: "AI screening took 0.8s, saving <strong>20 minutes of manual filtering and response emailing ($10 equivalent)</strong>."
+        }
+    };
+
+    function populateScreeningFields() {
+        const key = candidatePersonaSelect.value;
+        const data = candidateData[key];
+        if (data) {
+            resumeTextInput.value = data.resume;
+            jobTextInput.value = data.job;
+        }
+    }
+
+    // Populate default
+    populateScreeningFields();
+    candidatePersonaSelect.addEventListener('change', populateScreeningFields);
+
+    btnRunScreening.addEventListener('click', () => {
+        screeningPlaceholder.style.display = 'none';
+        screeningResults.style.display = 'none';
+        screeningLoader.style.display = 'flex';
+        
+        btnRunScreening.disabled = true;
+        
+        let progress = 0;
+        screeningProgressBar.style.width = '0%';
+        
+        const statusPhrases = [
+            { limit: 25, text: "Extracting skills, technologies, and metadata..." },
+            { limit: 55, text: "Comparing candidate profiles with target job specifications..." },
+            { limit: 80, text: "Calculating weighted skills match and pipeline routing scores..." },
+            { limit: 100, text: "Compiling final assessment verdict..." }
+        ];
+
+        const interval = setInterval(() => {
+            progress += 5;
+            screeningProgressBar.style.width = `${progress}%`;
+            
+            const phrase = statusPhrases.find(p => progress <= p.limit);
+            if (phrase) {
+                screeningStatusText.textContent = phrase.text;
+            }
+            
+            if (progress >= 100) {
+                clearInterval(interval);
+                btnRunScreening.disabled = false;
+                
+                // Show results
+                screeningLoader.style.display = 'none';
+                screeningResults.style.display = 'flex';
+                
+                const key = candidatePersonaSelect.value;
+                const result = candidateData[key];
+                
+                screeningScore.textContent = result.score;
+                screeningBadge.textContent = result.badge;
+                screeningBadge.className = `slide-badge ${result.badgeClass}`;
+                screeningVerdictTitle.textContent = result.verdict;
+                screeningEconomics.innerHTML = result.savings;
+                
+                // Set color of circle ring based on badge
+                const ringColor = result.badgeClass === 'blue' ? '#0ea5e9' : (result.badgeClass === 'gold' ? '#eab308' : '#64748b');
+                document.getElementById('screening-score-ring').style.borderColor = ringColor;
+                
+                screeningFactorsList.innerHTML = result.factors.map(f => `<li>${f}</li>`).join('');
+            }
+        }, 100);
+    });
+
+    // --- PROTOTYPE 2: SOLAR TELEMETRY IoT SIMULATOR ---
+    const telemetryKW = document.getElementById('telemetry-current-kw');
+    const telemetryKWH = document.getElementById('telemetry-total-kwh');
+    const telemetryCO2 = document.getElementById('telemetry-co2-kg');
+    const btnTriggerDegradation = document.getElementById('btn-trigger-degradation');
+    const btnDispatchOM = document.getElementById('btn-dispatch-om');
+    const telemetryStatusBadge = document.getElementById('telemetry-status-badge');
+    const telemetrySystemLogs = document.getElementById('telemetry-system-logs');
+    
+    const chartCurvePath = document.getElementById('chart-curve-path');
+    const chartAreaPath = document.getElementById('chart-area-path');
+
+    let baseKW = 42.8;
+    let accumulatedKWH = 312.4;
+    let accumulatedCO2 = 243.6;
+    let isDegraded = false;
+    let telemetryInterval;
+
+    function addLog(text) {
+        const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        telemetrySystemLogs.innerHTML = `[${time}] ${text}<br>${telemetrySystemLogs.innerHTML}`;
+    }
+
+    // Live telemetry variations
+    function startTelemetryStream() {
+        if (telemetryInterval) clearInterval(telemetryInterval);
+        
+        telemetryInterval = setInterval(() => {
+            let targetKW = baseKW;
+            if (isDegraded) {
+                targetKW = 22.4; // 40% reduction
+            }
+            
+            // Add tiny fluctuations
+            const currentKWVal = (targetKW + (Math.random() * 2 - 1)).toFixed(1);
+            telemetryKW.textContent = `${currentKWVal} kW`;
+            
+            // Accumulate
+            accumulatedKWH += parseFloat((currentKWVal / 1800).toFixed(4)); // kW converted to kWh over 2s
+            accumulatedCO2 += parseFloat((currentKWVal / 2400).toFixed(4));
+            
+            telemetryKWH.textContent = `${accumulatedKWH.toFixed(2)} kWh`;
+            telemetryCO2.textContent = `${accumulatedCO2.toFixed(2)} kg`;
+            
+            // Fluctuate curve path slightly
+            animateSVGChart(currentKWVal);
+        }, 2000);
+    }
+
+    function animateSVGChart(currentValue) {
+        // Move curves slightly to simulate a real live graph moving
+        const baseHeight = 150;
+        const scaleVal = Math.min(130, Math.max(30, 150 - (currentValue * 2)));
+        
+        // Generate a random-looking curve ending in our current value
+        const path = `M0,130 L100,110 L200,95 L300,105 L400,90 L500,95 L600,75 L700,85 L750,${scaleVal} L800,${scaleVal}`;
+        chartCurvePath.setAttribute('d', path);
+        chartAreaPath.setAttribute('d', `${path} L800,150 L0,150 Z`);
+    }
+
+    startTelemetryStream();
+
+    btnTriggerDegradation.addEventListener('click', () => {
+        isDegraded = true;
+        baseKW = 22.4;
+        
+        telemetryStatusBadge.textContent = "WARNING: DEGRADATION ALERT";
+        telemetryStatusBadge.style.background = "#ffe4e6";
+        telemetryStatusBadge.style.color = "#be123c";
+        
+        addLog("🚨 ALERT: Dust/Debris accumulation detected on Array Grid #NG-8802.");
+        addLog("🚨 Efficiency drop: -48.2% output power capacity loss.");
+        
+        btnTriggerDegradation.style.display = 'none';
+        btnDispatchOM.style.display = 'block';
+    });
+
+    btnDispatchOM.addEventListener('click', () => {
+        btnDispatchOM.disabled = true;
+        addLog("🔧 DISPATCHING: Nature Grid O&M crew dispatched to Jithvar HQ.");
+        
+        let counter = 0;
+        const loaderLog = setInterval(() => {
+            counter++;
+            if (counter === 1) addLog("🔧 Crew arrived. Cleaning cells on Node #7...");
+            if (counter === 2) addLog("🔧 Operations check: cell cleaning completed. Re-calibrating...");
+            if (counter === 3) {
+                clearInterval(loaderLog);
+                btnDispatchOM.disabled = false;
+                btnDispatchOM.style.display = 'none';
+                btnTriggerDegradation.style.display = 'block';
+                
+                isDegraded = false;
+                baseKW = 42.8;
+                
+                telemetryStatusBadge.textContent = "SYSTEM OPERATIONAL";
+                telemetryStatusBadge.style.background = "#e0f2fe";
+                telemetryStatusBadge.style.color = "#0369a1";
+                
+                addLog("✅ RESOLVED: Dust cleared. Cell health 100%. Output power restored.");
+                addLog("✅ INVOICE GENERATED: $250.00 billed automatically to O&M client account.");
+            }
+        }, 1200);
+    });
+
+    // --- PROTOTYPE 3: JCS TEMPLATE MARKETPLACE ---
+    const deployButtons = document.querySelectorAll('.btn-deploy-template');
+    const protoTerminal = document.getElementById('prototype-terminal');
+    const terminalBody = document.getElementById('terminal-body-content');
+
+    function typeTerminalLine(text, type = 'info', delay = 0) {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                const line = document.createElement('div');
+                line.className = `terminal-line terminal-${type}`;
+                
+                if (type === 'cmd') {
+                    line.innerHTML = `<span style="color:#10b981;">$</span> ${text}`;
+                } else if (type === 'success') {
+                    line.innerHTML = `[SUCCESS] ${text}`;
+                } else {
+                    line.innerHTML = `[INFO] ${text}`;
+                }
+                
+                terminalBody.appendChild(line);
+                terminalBody.scrollTop = terminalBody.scrollHeight;
+                resolve();
+            }, delay);
+        });
+    }
+
+    deployButtons.forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const templateId = btn.getAttribute('data-template-id');
+            const license = btn.getAttribute('data-license');
+            const name = btn.getAttribute('data-name');
+            
+            // Show terminal
+            protoTerminal.style.display = 'block';
+            terminalBody.innerHTML = '';
+            
+            // Disable button
+            btn.disabled = true;
+            btn.textContent = "Installing...";
+            
+            await typeTerminalLine(`npx jcs-deploy-template --template=${templateId} --env=production`, 'cmd', 200);
+            await typeTerminalLine("Accessing Jithvar central software code repository...", 'info', 600);
+            await typeTerminalLine(`Cloning template database records: "${name}" v2.1.0...`, 'info', 500);
+            await typeTerminalLine("Connecting B2B API gateway nodes to AWS RDS instances...", 'info', 600);
+            await typeTerminalLine("Compiling microservices and running migration tasks...", 'info', 500);
+            await typeTerminalLine("Running unit tests: 14 passing, 0 failed.", 'info', 400);
+            await typeTerminalLine(`Deployment successful! Target module active at client-app.jithvar.com.`, 'success', 500);
+            await typeTerminalLine(`B2B Recurring Billing connected: Billed $${license}/month on license token.`, 'success', 300);
+            
+            btn.textContent = "Deployed (Active License)";
+            btn.style.background = "#14532d";
+            btn.style.borderColor = "#22c55e";
+            btn.style.color = "#22c55e";
+        });
+    });

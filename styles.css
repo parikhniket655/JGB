@@ -1887,3 +1887,60 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 100% !important;
     }
 }
+
+
+/* -------------------------------------------------------------
+   INTERACTIVE SIMULATOR PROTOTYPE STYLES
+   ========================================================================== */
+.proto-tab-btn {
+    border-radius: var(--border-radius-md) !important;
+    padding: 8px 16px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    border: 1px solid var(--border-color) !important;
+    cursor: pointer;
+    transition: var(--transition-smooth) !important;
+}
+
+.proto-tab-btn.active {
+    background: var(--color-primary) !important;
+    color: white !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 4px 12px rgba(230, 25, 60, 0.25) !important;
+}
+
+.proto-tab-content {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+.spinner {
+    display: inline-block;
+}
+
+.terminal-line {
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+}
+
+.terminal-success {
+    color: #4ade80 !important;
+}
+
+.terminal-info {
+    color: #38bdf8 !important;
+}
+
+.terminal-cmd {
+    color: #e2e8f0 !important;
+}
