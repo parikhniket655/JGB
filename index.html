@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBG Portfolio Growth Engine Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header no-print">
+        <div class="header-logo">
+            <div class="logo-icon"></div>
+            <div class="logo-text">
+                <span class="jbg-brand">JITHVAR</span>
+                <span class="jbg-sub">Business Group</span>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <button class="nav-btn active" data-tab="dashboard" id="tab-dashboard"><svg class="icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14H7v-7h3v7zm4 0h-3V7h3v10zm4 0h-3v-4h3v4z"/></svg>Dashboard</button>
+            <button class="nav-btn" data-tab="presentation" id="tab-presentation"><svg class="icon" viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.9-.9 1.9-2l.01-12c0-1.1-.9-2-1.9-2zm0 14H3V5h18v12z"/></svg>Pitch Deck</button>
+            <button class="nav-btn" data-tab="calculator" id="tab-calculator"><svg class="icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Prioritizer</button>
+            <button class="nav-btn" data-tab="memo" id="tab-memo"><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>Executive Memo</button>
+            <button class="nav-btn" data-tab="analysis" id="tab-analysis"><svg class="icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2z"/></svg>Supporting Analysis</button>
+        </nav>
+        <div class="header-actions">
+            <button class="btn btn-secondary" onclick="window.print()"><svg class="icon" viewBox="0 0 24 24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>Export PDF</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- TAB 1: EXECUTIVE DASHBOARD -->
+        <section id="content-dashboard" class="tab-content active">
+            <div class="dashboard-hero">
+                <h1>JBG Growth Portfolio Engine (GPE)</h1>
+                <p>A unified, capability-driven capital and resource allocation platform to systematically scale core businesses and launch synergy-driven ventures.</p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <!-- Portfolio Overview Card -->
+                <div class="card card-wide">
+                    <h2>Current Business Units & Adjacency Path</h2>
+                    <div class="bu-grid">
+                        <div class="bu-card">
+                            <span class="bu-tag tech">Technology & Consulting</span>
+                            <h3>JCS</h3>
+                            <p>Technology consulting, ERP/CRM, software development, and digital transformation.</p>
+                            <div class="bu-path">
+                                <span class="arrow-tag">Core Growth</span> Cloud ERP/CRM & Int'l Managed Services
+                            </div>
+                        </div>
+                        <div class="bu-card">
+                            <span class="bu-tag energy">Clean Energy</span>
+                            <h3>Nature Grid Energy</h3>
+                            <p>Solar installation, maintenance, commercial and industrial projects.</p>
+                            <div class="bu-path">
+                                <span class="arrow-tag">Core Growth</span> Commercial & Industrial (C&I) Solar O&M SaaS
+                            </div>
+                        </div>
+                        <div class="bu-card">
+                            <span class="bu-tag hr">Workforce Solutions</span>
+                            <h3>Aequalis Global</h3>
+                            <p>Executive search, recruitment, bulk hiring, and contract staffing.</p>
+                            <div class="bu-path">
+                                <span class="arrow-tag">Core Growth</span> Specialized IT Staffing & Recruiting Retainers
+                            </div>
+                        </div>
+                        <div class="bu-card">
+                            <span class="bu-tag venture">New Ventures</span>
+                            <h3>New Ventures</h3>
+                            <p>Technology products, incubator, SaaS, and strategic business investments.</p>
+                            <div class="bu-path">
+                                <span class="arrow-tag">Core Growth</span> Synergy SaaS: HR Tech & Solar Energy Telemetry
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 90-Day Execution Dashboard -->
+                <div class="card">
+                    <h2>90-Day Execution Plan</h2>
+                    <div class="execution-progress">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" style="width: 35%;"></div>
+                        </div>
+                        <div class="progress-status">Phase 1: Diagnose (35% Completed)</div>
+                    </div>
+                    <div class="roadmap-accordion">
+                        <div class="roadmap-phase active" data-phase="1">
+                            <div class="phase-header">
+                                <span class="phase-number">01</span>
+                                <div>
+                                    <h4>Diagnose (Days 1–30)</h4>
+                                    <span class="phase-sub">Audit & Baseline Setup</span>
+                                </div>
+                            </div>
+                            <ul class="phase-checklist">
+                                <li class="checked">Audit existing client revenue and margins</li>
+                                <li class="checked">Identify JCS developer capacity limits</li>
+                                <li>Establish JBG Business Health Dashboard</li>
+                            </ul>
+                        </div>
+                        <div class="roadmap-phase" data-phase="2">
+                            <div class="phase-header">
+                                <span class="phase-number">02</span>
+                                <div>
+                                    <h4>Discover (Days 31–60)</h4>
+                                    <span class="phase-sub">Opportunity Sourcing & Scoring</span>
+                                </div>
+                            </div>
+                            <ul class="phase-checklist">
+                                <li>Gather growth ideas into central database</li>
+                                <li>Evaluate opportunities using 8-factor scorecard</li>
+                                <li>Select top 3 initiatives for proof-of-concept</li>
+                            </ul>
+                        </div>
+                        <div class="roadmap-phase" data-phase="3">
+                            <div class="phase-header">
+                                <span class="phase-number">03</span>
+                                <div>
+                                    <h4>Validate (Days 61–90)</h4>
+                                    <span class="phase-sub">Customer Discovery & Pilots</span>
+                                </div>
+                            </div>
+                            <ul class="phase-checklist">
+                                <li>Conduct 30+ client interviews per pilot</li>
+                                <li>Build low-code MVPs to test customer demand</li>
+                                <li>Execute GTM and pricing validation tests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Target Card -->
+                <div class="card">
+                    <h2>Core Target Metrics & KPIs</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="metric-label">LTV : CAC Target</span>
+                            <span class="metric-value">&gt; 3.0x</span>
+                            <span class="metric-trend up">SaaS Viability Standard</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">Payback Period Target</span>
+                            <span class="metric-value">&lt; 12 mo</span>
+                            <span class="metric-trend up">High Capital Velocity</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">Core EBITDA Margin</span>
+                            <span class="metric-value">25% +</span>
+                            <span class="metric-trend up">High Value Services/SaaS</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-label">Early-Killed Projects</span>
+                            <span class="metric-value">70% +</span>
+                            <span class="metric-trend down">Conserves Capital</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: INTERACTIVE PRESENTATION VIEW -->
+        <section id="content-presentation" class="tab-content">
+            <div class="deck-container">
+                <div class="deck-sidebar no-print">
+                    <h3>Slide Navigator</h3>
+                    <ul class="slide-list" id="slide-nav-list">
+                        <!-- Will be populated by JS -->
+                    </ul>
+                </div>
+                
+                <div class="deck-viewer">
+                    <div class="slide-card" id="active-slide-container">
+                        <!-- Slide content populated by JS -->
+                    </div>
+                    
+                    <div class="slide-controls no-print">
+                        <button class="btn btn-secondary" id="btn-prev-slide">← Previous</button>
+                        <span class="slide-indicator" id="slide-num-indicator">Slide 1 of 12</span>
+                        <button class="btn" id="btn-next-slide">Next →</button>
+                    </div>
+
+                    <div class="presenter-notes" id="presenter-notes-container">
+                        <h3><svg class="icon" style="fill: var(--accent-gold); margin-right: 8px; vertical-align: text-bottom;" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>Presenter Talking Points</h3>
+                        <p id="presenter-notes-text"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: PRIORITIZATION CALCULATOR -->
+        <section id="content-calculator" class="tab-content">
+            <div class="calc-hero">
+                <h1>JBG Opportunity Prioritization Framework</h1>
+                <p>Quantitatively evaluate and prioritize growth initiatives. Edit factor weights (total must sum to 100%) and adjust individual raw scores (1 to 10) to dynamically calculate weighted opportunity scores.</p>
+            </div>
+            
+            <div class="calc-grid">
+                <!-- Weights Control Panel -->
+                <div class="card card-wide no-print">
+                    <div class="card-header-flex">
+                        <h2>1. Configure Decision Weights</h2>
+                        <span class="weight-total-badge" id="weight-total-status">Total: 100%</span>
+                    </div>
+                    <div class="weights-control-grid">
+                        <div class="weight-input-group">
+                            <label for="w-market">Market Attractiveness (%)</label>
+                            <input type="number" id="w-market" value="20" min="0" max="100" class="weight-input">
+                        </div>
+                        <div class="weight-input-group">
+                            <label for="w-revenue">Revenue Potential (%)</label>
+                            <input type="number" id="w-revenue" value="20" min="0" max="100" class="weight-input">
+                        </div>
+                        <div class="weight-input-group">
+                            <label for="w-capability">JBG Capability Fit (%)</label>
+                            <input type="number" id="w-capability" value="15" min="0" max="100" class="weight-input">
+                        </div>
+                        <div class="weight-input-group">
+                            <label for="w-strategic">Strategic Fit (%)</label>
+                            <input type="number" id="w-strategic" value="15" min="0" max="100" class="weight-input">
+                        </div>
+                        <div class="weight-input-group">
+                            <label for="w-comp">Competitive Intensity (%)</label>
+                            <input type="number" id="w-comp" value="10" min="0" max="100" class="weight-input">
+                        </div>
+                        <div class="weight-input-group">
+                            <label for="w-execution">Ease of Execution (%)</label>
+                            <input type="number" id="w-execution" value="10" min="0" max="100" class="weight-input">
+                        </div>
+                        <div class="weight-input-group">
+                            <label for="w-capital">Capital Efficiency (%)</label>
+                            <input type="number" id="w-capital" value="5" min="0" max="100" class="weight-input">
+                        </div>
+                        <div class="weight-input-group">
+                            <label for="w-risk">Risk Mitigation (%)</label>
+                            <input type="number" id="w-risk" value="5" min="0" max="100" class="weight-input">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opportunities Table and Interactive Scorer -->
+                <div class="card card-wide">
+                    <h2>2. Raw Scores & Weighted Rankings</h2>
+                    <div class="table-container">
+                        <table class="calc-table" id="opportunities-table">
+                            <thead>
+                                <tr>
+                                    <th>Initiative</th>
+                                    <th>Market Attractiveness (20%)</th>
+                                    <th>Revenue Potential (20%)</th>
+                                    <th>Capability Fit (15%)</th>
+                                    <th>Strategic Fit (15%)</th>
+                                    <th>Competition (10%)</th>
+                                    <th>Execution (10%)</th>
+                                    <th>Capital Eff (5%)</th>
+                                    <th>Risk Mitig (5%)</th>
+                                    <th class="col-score">Opportunity Score</th>
+                                    <th class="no-print">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Will be populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="add-opp-form no-print">
+                        <h3>Add Custom Growth Initiative</h3>
+                        <div class="form-row">
+                            <input type="text" id="new-opp-name" placeholder="Initiative Name (e.g. Expand JCS to Middle East)" class="form-input">
+                            <button class="btn" id="btn-add-opp"><svg class="icon" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>Add Opportunity</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Visualization Chart -->
+                <div class="card card-wide">
+                    <h2>3. Opportunity Ranking Chart</h2>
+                    <div class="chart-container">
+                        <div class="svg-chart-wrapper" id="bar-chart-container">
+                            <!-- SVG Chart will render here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: EXECUTIVE SUMMARY MEMO -->
+        <section id="content-memo" class="tab-content memo-view">
+            <div class="memo-container">
+                <div class="memo-header-text">
+                    <h1>EXECUTIVE MEMORANDUM</h1>
+                    <p class="memo-meta"><strong>TO:</strong> JBG Management Team | <strong>FROM:</strong> Business Strategy Associate | <strong>DATE:</strong> August 12, 2026</p>
+                    <p class="memo-meta"><strong>SUBJECT:</strong> JBG Portfolio Growth Engine (GPE) — Capital Allocation & Synergetic Growth Strategy</p>
+                </div>
+                <hr>
+                
+                <h3>Context & Strategic Challenge</h3>
+                <p>Jithvar Business Group (JBG) operates a highly diversified portfolio across Technology Consulting (JCS), Renewable Energy (Nature Grid), Recruitment & Workforce Solutions (Aequalis Global), and SaaS/New Ventures. While each business shows strong individual potential, JBG faces classic constraints: <strong>limited capital, management attention, and execution bandwidth</strong>. The fundamental strategic challenge is not merely listing new business ideas, but building a <strong>systematic, repeatable engine</strong> to decide <em>where to grow</em>, <em>which opportunities to pursue</em>, and <em>what to execute first</em>.</p>
+                
+                <h3>Core Recommendation: The JBG Portfolio Growth Engine (GPE)</h3>
+                <p>Rather than operating these business units as independent silos, JBG must transition to a <strong>unified, capability-driven platform</strong>. We propose the <strong>JBG Portfolio Growth Engine (GPE)</strong>, a structured methodology that optimizes core operations, drives cross-business synergies, and objectively evaluates opportunities using a quantitative prioritization scorecard.</p>
+                
+                <div class="memo-callout-grid">
+                    <div class="callout-card">
+                        <h4>Job 1: Grow What Exists (Core Optimization)</h4>
+                        <ul>
+                            <li><strong>JCS</strong>: Pivot from low-margin custom software development to international IT managed services, CRM/ERP integrations, and cloud migrations. This secures high-margin retainers.</li>
+                            <li><strong>Nature Grid</strong>: Shift focus from capital-intensive residential installations to Commercial & Industrial (C&I) solar and high-margin, long-term Operation & Maintenance (O&M) contracts.</li>
+                            <li><strong>Aequalis Global</strong>: Expand from transactional executive search into high-frequency contract staffing and specialized IT recruitment, creating a predictable, recurring cash flow engine.</li>
+                        </ul>
+                    </div>
+                    <div class="callout-card">
+                        <h4>Job 2: Find What’s Next (Cross-Business Synergies)</h4>
+                        <ul>
+                            <li><strong>Recruitment SaaS (HR Tech)</strong>: Combine Aequalis Global’s domain expertise and client networks with JCS’s software engineering to build a vertical recruitment automation platform.</li>
+                            <li><strong>Energy Management Analytics</strong>: Combine Nature Grid’s solar site installations with JCS's technical capabilities to build an IoT-driven solar asset monitoring and predictive maintenance SaaS.</li>
+                            <li><strong>Consulting Productization</strong>: Package repeatable consulting methodologies from JCS into software-as-a-service (SaaS) templates for mid-market clients, transitioning from project-based billing to scalable subscription revenue.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>The Opportunity Prioritization Scorecard</h3>
+                <p>To eliminate emotional capital allocation, JBG must screen all growth initiatives through a standardized, multi-factor scorecard: Market Attractiveness (20%), Revenue Potential (20%), Strategic Fit (15%), JBG Capability Fit (15%), Competitive Intensity (10%), Ease/Speed of Execution (10%), Capital Required (5%), and Execution/Operational Risk (5%). This transforms strategic debate from intuitive guesswork into objective commercial ranking.</p>
+
+                <h3>90-Day Execution Roadmap</h3>
+                <ul>
+                    <li><strong>Days 1–30 (Diagnose)</strong>: Review baseline financial and capability metrics for existing business lines. Establish the JBG Business Health Dashboard.</li>
+                    <li><strong>Days 31–60 (Discover)</strong>: Populate the growth opportunity pipeline. Assess and score opportunities using the Prioritization Scorecard, narrowing the longlist from 20+ to 3 priority pilots.</li>
+                    <li><strong>Days 61–90 (Validate)</strong>: Conduct customer discovery, test pricing assumptions, and launch minimum viable pilots (MVPs) for the top-ranked opportunities.</li>
+                </ul>
+
+                <h3>Key Metrics of Success</h3>
+                <p>JBG should measure success across a hierarchy of KPIs: Portfolio-level ROIC and revenue growth, Initiative-level customer acquisition cost (CAC) and payback period, and Innovation-level metrics—most notably the <strong>% of projects killed early</strong>—to ensure capital discipline.</p>
+            </div>
+        </section>
+
+        <!-- TAB 5: SUPPORTING ANALYSIS VIEW -->
+        <section id="content-analysis" class="tab-content memo-view">
+            <div class="memo-container">
+                <h1>SUPPORTING STRATEGIC ANALYSIS</h1>
+                <p class="subtitle text-muted">Detailed Formulas, Synergy Models, and Risk Management Frameworks</p>
+                <hr>
+
+                <h2>1. Prioritization Scorecard Mathematics</h2>
+                <p>To ensure objectivity, the Opportunity Score (S<sub>opp</sub>) is calculated as a weighted sum of individual scores across 8 factors. Each factor is scored on a scale of 1 to 10:</p>
+                <div class="equation">
+                    <p style="text-align: center; font-family: monospace; font-size: 1.2rem; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 6px;">
+                        S<sub>opp</sub> = w<sub>market</sub>·s<sub>market</sub> + w<sub>revenue</sub>·s<sub>revenue</sub> + w<sub>capability</sub>·s<sub>capability</sub> + w<sub>strategic</sub>·s<sub>strategic</sub> + w<sub>competition</sub>·s<sub>competition</sub> + w<sub>execution</sub>·s<sub>execution</sub> + w<sub>capital</sub>·s<sub>capital</sub> + w<sub>risk</sub>·s<sub>risk</sub>
+                    </p>
+                </div>
+                <p>Where w<sub>i</sub> is the weight of factor i (such that &Sigma; w<sub>i</sub> = 100%) and s<sub>i</sub> is the raw score of factor i (on a 1–10 scale).</p>
+                
+                <h3>Scorecard Weights and Definitions:</h3>
+                <ul>
+                    <li><strong>Market Attractiveness (20%):</strong> Evaluates the Total Addressable Market (TAM), served addressable market (SAM), and CAGR.</li>
+                    <li><strong>Revenue Potential (20%):</strong> Assesses pricing power, customer willingness to pay, and recurring nature of revenue (subscriptions/retainers).</li>
+                    <li><strong>JBG Capability Fit (15%):</strong> Measures leverage of existing JCS software developers, Aequalis recruiter networks, and Nature Grid solar technicians.</li>
+                    <li><strong>Strategic Fit (15%):</strong> Evaluates alignment with the JBG brand, portfolio diversification, and long-term enterprise valuation.</li>
+                    <li><strong>Competitive Intensity (10%):</strong> Score is inversely proportional to competitive density. High barriers to entry yield higher scores.</li>
+                    <li><strong>Ease of Execution (10%):</strong> Accounts for development timelines, technical complexity, and regulatory permissions.</li>
+                    <li><strong>Capital Efficiency (5%):</strong> Favors asset-light operational models (SaaS) over capital-intensive setups (hardware acquisitions).</li>
+                    <li><strong>Risk Mitigation (5%):</strong> Mitigates financial, liability, legal, and operational risks.</li>
+                </ul>
+
+                <hr class="section-divider">
+
+                <h2>2. Cross-Business Synergy Mechanics</h2>
+                <div class="synergy-flowcard">
+                    <h3>Synergy A: Aequalis Global + JCS &rarr; HR Tech / Recruitment SaaS</h3>
+                    <p><strong>Value Capture:</strong> Aequalis Global operates on transactional placement fees. By introducing a recruitment automation SaaS, JBG can charge mid-market clients a monthly subscription. JCS provides the software engineering, while Aequalis acts as the client channel.</p>
+                </div>
+
+                <div class="synergy-flowcard">
+                    <h3>Synergy B: Nature Grid + JCS &rarr; Solar Telemetry & Predictive O&M SaaS</h3>
+                    <p><strong>Value Capture:</strong> Solar installation is a low-margin capital contract. Adding telemetry monitoring software lets Nature Grid sell long-term predictive maintenance and performance agreements, securing recurring revenue streams.</p>
+                </div>
+
+                <hr class="section-divider">
+
+                <h2>3. B2B Unit Economics Framework</h2>
+                <p>Before launching a pilot, JBG must validate that the opportunity has a sustainable unit economic profile using three metrics:</p>
+                
+                <div class="economics-card-grid">
+                    <div class="eco-card">
+                        <h4>Customer Acquisition Cost (CAC)</h4>
+                        <div class="formula">
+                            <p style="font-family: monospace; text-align: center; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 4px;">
+                                CAC = (Sales Costs + Marketing Costs) / (New Customers)
+                            </p>
+                        </div>
+                        <p class="eco-text">JBG can achieve near-zero marketing CAC by cross-selling to Aequalis and Nature Grid's existing corporate clients during initial launch phases.</p>
+                    </div>
+                    <div class="eco-card">
+                        <h4>Customer Lifetime Value (LTV)</h4>
+                        <div class="formula">
+                            <p style="font-family: monospace; text-align: center; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 4px;">
+                                LTV = (Monthly ARPU &times; Gross Margin %) / Churn Rate
+                            </p>
+                        </div>
+                        <p class="eco-text">Subscription products must target an LTV to CAC ratio of <strong>greater than 3.0x</strong> for venture funding feasibility.</p>
+                    </div>
+                </div>
+
+                <hr class="section-divider">
+
+                <h2>4. Strategic Risk Mitigation Matrix</h2>
+                <table class="analysis-table">
+                    <thead>
+                        <tr>
+                            <th>Risk Category</th>
+                            <th>Specific Risk Description</th>
+                            <th>Impact</th>
+                            <th>Mitigation Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Operational</strong></td>
+                            <td>Siloed corporate culture blocks cooperation between business units.</td>
+                            <td>High</td>
+                            <td>Appoint a Group Synergy Officer. Tie sales commissions to cross-sell conversions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Technical</strong></td>
+                            <td>JCS software developers lack specialized IoT/solar experience.</td>
+                            <td>Medium</td>
+                            <td>Hire a senior IoT systems architect for Solar Telemetry. Build with low-code MVPs first.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Regulatory</strong></td>
+                            <td>Solar net metering and subsidy policy changes.</td>
+                            <td>High</td>
+                            <td>Diversify Nature Grid’s operations across multiple states in India to hedge risk.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Financial</strong></td>
+                            <td>Capital exhaustion due to slow-payback growth projects.</td>
+                            <td>High</td>
+                            <td>Enforce strict milestone gates: if an MVP has no paid signups in 60 days, kill the project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer no-print">
+        <p>© 2026 Jithvar Business Group. Confidential Strategy Document - JBG Business Fellowship Program.</p>
+    </footer>
+
+    <!-- Global Source/Rationale Modal -->
+    <div id="sources-modal" class="modal-overlay no-print">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="modal-title">Opportunity Rationale & Data Sources</h3>
+                <button id="modal-close" class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
