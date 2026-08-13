@@ -1519,6 +1519,269 @@ h1, h2, h3, h4, h5, h6 {
     fill: currentColor;
 }
 
+/* ==========================================================================
+   MCKINSEY/BCG STYLE LIGHT PRESENTATION DECK
+   ========================================================================== */
+.slide-card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    color: #1e293b !important;
+}
+
+/* Slide header & branding */
+.slide-header-logo {
+    color: #475569 !important;
+    font-weight: 700 !important;
+    opacity: 0.8 !important;
+}
+
+.slide-header-logo::before {
+    background: #0f2537 !important; /* corporate deep navy */
+}
+
+.slide-header h2 {
+    color: #0f2537 !important; /* deep navy title */
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.slide-subtitle {
+    color: #475569 !important; /* slate grey subtitle */
+    font-weight: 400 !important;
+    font-size: 0.95rem !important;
+}
+
+/* Slide Body elements */
+.slide-body p {
+    color: #475569 !important;
+}
+
+.slide-body strong {
+    color: #0f2537 !important;
+}
+
+/* Slide columns and content grids */
+.slide-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide-hero-title {
+    color: #0f2537 !important;
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    font-family: 'Outfit', sans-serif !important;
+    letter-spacing: -0.02em !important;
+}
+
+.slide-hero-sub {
+    color: #475569 !important;
+    font-size: 1.25rem !important;
+    font-weight: 400 !important;
+    margin-top: 8px !important;
+}
+
+.slide-hero-meta {
+    color: #94a3b8 !important;
+    font-size: 0.85rem !important;
+    margin-top: 24px !important;
+}
+
+/* Visual cards in slides */
+.slide-card-visual {
+    background: #f8fafc !important; /* clean light slate */
+    border: 1px solid #e2e8f0 !important;
+    color: #334155 !important;
+    box-shadow: none !important;
+}
+
+.slide-card-visual:hover {
+    background: #f1f5f9 !important;
+    border-color: #cbd5e1 !important;
+}
+
+.slide-card-visual h4 {
+    color: #0f2537 !important; /* corporate blue titles instead of neon crimson */
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+.slide-card-visual p {
+    color: #475569 !important;
+}
+
+/* Custom highlighted cards */
+.slide-card-visual[style*="border-color"],
+.slide-card-visual.highlight-card {
+    background: rgba(15, 37, 55, 0.02) !important;
+    border-color: #0f2537 !important;
+}
+
+/* Specific red border visual card mapping for innovation slides */
+.slide-card-visual[style*="rgba(230, 25, 60, 0.3)"] {
+    background: rgba(230, 25, 60, 0.02) !important;
+    border-color: rgba(230, 25, 60, 0.4) !important;
+}
+
+/* Metric displays in slides */
+.slide-metric-large {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 100px !important;
+    box-shadow: none !important;
+}
+
+.slide-metric-large .num {
+    color: #0f2537 !important; /* dark blue large number */
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    font-family: 'Outfit', sans-serif !important;
+    line-height: 1 !important;
+}
+
+.slide-metric-large .label {
+    color: #64748b !important;
+    font-size: 0.8rem !important;
+    margin-top: 6px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    font-weight: 600 !important;
+}
+
+/* Badges inside slides */
+.slide-badge {
+    background: #e2e8f0 !important;
+    color: #475569 !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+.slide-badge.gold {
+    background: #fef3c7 !important;
+    color: #b45309 !important;
+    border: 1px solid #fde68a !important;
+}
+
+.slide-badge.blue {
+    background: #e0f2fe !important;
+    color: #0369a1 !important;
+    border: 1px solid #bae6fd !important;
+}
+
+.slide-badge.highlight {
+    background: #ffe4e6 !important;
+    color: #be123c !important;
+    border: 1px solid #fecdd3 !important;
+}
+
+/* Bullet list formatting inside slides */
+.slide-card ul {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.slide-card li {
+    position: relative !important;
+    padding-left: 16px !important;
+    margin-bottom: 8px !important;
+    color: #475569 !important;
+    font-size: 0.85rem !important;
+}
+
+.slide-card li::before {
+    content: "•" !important;
+    color: #0f2537 !important;
+    position: absolute !important;
+    left: 0 !important;
+    font-weight: bold !important;
+}
+
+/* Map neon text variables to rich corporate colors */
+.slide-card [style*="color: var(--color-primary-hover)"] {
+    color: #be123c !important; /* Crimson */
+}
+
+.slide-card [style*="color: #00b0ff"] {
+    color: #0284c7 !important; /* Sky Blue */
+}
+
+.slide-card [style*="color: var(--success-color)"] {
+    color: #16a34a !important; /* Forest Green */
+}
+
+/* Map inline backgrounds for step numbers in Slide 2 */
+.slide-card div[style*="border-radius:50%"] {
+    background: #e0f2fe !important;
+    color: #0369a1 !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+/* Map inline borders in Slide 2 */
+.slide-card div[style*="border-left: 3px solid var(--color-primary)"] {
+    border-left-color: #be123c !important;
+}
+.slide-card div[style*="border-left: 3px solid var(--accent-gold)"] {
+    border-left-color: #b45309 !important;
+}
+.slide-card div[style*="border-left: 3px solid #00b0ff"] {
+    border-left-color: #0284c7 !important;
+}
+
+/* Before/After panels in slides */
+.slide-compare-panel {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: none !important;
+}
+
+.slide-compare-row {
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.slide-compare-label {
+    background: #e2e8f0 !important;
+    color: #475569 !important;
+    font-weight: 700 !important;
+}
+
+.slide-compare-val {
+    color: #334155 !important;
+}
+
+.slide-compare-stat {
+    color: #0f2537 !important;
+    font-weight: 700 !important;
+}
+
+.slide-compare-row.highlight {
+    background: rgba(15, 37, 55, 0.02) !important;
+}
+
+.slide-compare-row.highlight .slide-compare-label {
+    background: #e0f2fe !important;
+    color: #0369a1 !important;
+}
+
+/* Slide footer */
+.slide-footer {
+    border-top: 1px solid #e2e8f0 !important;
+    padding-top: 16px !important;
+    color: #94a3b8 !important;
+}
+
 @media print {
     /* Hide all workspace layouts, headers, buttons */
     .no-print,
