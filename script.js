@@ -85,36 +85,51 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="slide-grid-2">
                     <div class="slide-card-visual" style="padding: 24px;">
-                        <h4>The Bottleneck</h4>
-                        <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 10px;">
+                        <h4>The Bottleneck: Resource Dispersion</h4>
+                        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px; line-height:1.4;">
+                            JBG footprints across Software, Solar, and HR represent high-growth vectors, but decentralized capital allocations dilute overall Group impact.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
                             <div style="border-left: 3px solid var(--color-primary); padding-left: 12px;">
-                                <strong style="display:block; font-size: 0.9rem;">1. Sourced Pipeline Saturated</strong>
-                                <span style="font-size:0.8rem; color: var(--text-muted);">Over 20+ opportunities competing for capital simultaneously, leading to decision paralysis.</span>
+                                <strong style="font-size: 0.9rem; color:var(--text-main);">1. Sourced Pipeline Saturation</strong>
+                                <span style="display:block; font-size:0.8rem; color: var(--text-muted); margin-top:2px;">Over 20+ opportunities compete for capital simultaneously, leading to decision paralysis.</span>
                             </div>
                             <div style="border-left: 3px solid var(--accent-gold); padding-left: 12px;">
-                                <strong style="display:block; font-size: 0.9rem;">2. Resource & Bandwidth Limits</strong>
-                                <span style="font-size:0.8rem; color: var(--text-muted);">Strict bottlenecks in software engineering headcount, management oversight, and investable cash.</span>
+                                <strong style="font-size: 0.9rem; color:var(--text-main);">2. Resource & Bandwidth Limits</strong>
+                                <span style="display:block; font-size:0.8rem; color: var(--text-muted); margin-top:2px;">Strict bottlenecks in software engineering headcount, management oversight, and investable cash.</span>
                             </div>
-                            <div style="border-left: 3px solid #00b0ff; padding-left: 12px;">
-                                <strong style="display:block; font-size: 0.9rem;">3. Subjective Bias in Budgeting</strong>
-                                <span style="font-size:0.8rem; color: var(--text-muted);">Historical capital allocations influenced by subjective preference rather than hard commercial metrics.</span>
+                            <div style="border-left: 3px solid #0284c7; padding-left: 12px;">
+                                <strong style="font-size: 0.9rem; color:var(--text-main);">3. Subjective Bias in Budgeting</strong>
+                                <span style="display:block; font-size:0.8rem; color: var(--text-muted); margin-top:2px;">Historical choices driven by emotional department preferences rather than objective ROIC.</span>
                             </div>
                         </div>
                     </div>
-                    <div class="slide-card-visual" style="padding: 24px; border-color: rgba(0, 176, 255, 0.2);">
-                        <h4>The Growth Funnel</h4>
-                        <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 10px;">
+                    <div class="slide-card-visual" style="padding: 24px;">
+                        <h4>The Solution: The Growth Funnel</h4>
+                        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px; line-height:1.4;">
+                            Establish a standardized pipeline filter that screens opportunities for strategic alignment, capability fit, and economics before scaling funding.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
                             <div style="display: flex; gap: 12px; align-items: flex-start;">
-                                <div style="width:28px; height:28px; border-radius:50%; background:var(--color-primary-light); color:var(--color-primary-hover); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; flex-shrink:0;">1</div>
-                                <div><strong style="font-size: 0.9rem; display:block;">Diagnose Core Health</strong><span style="display:block; font-size:0.8rem; color:var(--text-muted);">Optimize existing business operations, cost margins, and contract retainers first.</span></div>
+                                <div style="width:28px; height:28px; border-radius:50%; background:#e0f2fe; color:#0369a1; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; flex-shrink:0; margin-top:2px;">1</div>
+                                <div>
+                                    <strong style="font-size: 0.9rem; display:block;">Phase 1: Diagnose Core Health (Days 1-30)</strong>
+                                    <span style="display:block; font-size:0.8rem; color:var(--text-muted); margin-top:2px;">Audit cost structures, current client margins, and developer capacity to establish baseline.</span>
+                                </div>
                             </div>
                             <div style="display: flex; gap: 12px; align-items: flex-start;">
-                                <div style="width:28px; height:28px; border-radius:50%; background:rgba(212,175,55,0.1); color:var(--accent-gold); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; flex-shrink:0;">2</div>
-                                <div><strong style="font-size: 0.9rem; display:block;">Prioritization Matrix</strong><span style="display:block; font-size:0.8rem; color:var(--text-muted);">Score prospective opportunities across 8 weighted market and capability dimensions.</span></div>
+                                <div style="width:28px; height:28px; border-radius:50%; background:#e0f2fe; color:#0369a1; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; flex-shrink:0; margin-top:2px;">2</div>
+                                <div>
+                                    <strong style="font-size: 0.9rem; display:block;">Phase 2: Scorecard Prioritization (Days 31-60)</strong>
+                                    <span style="display:block; font-size:0.8rem; color:var(--text-muted); margin-top:2px;">Rank opportunities across 8 weighted market attractiveness and capability fit factors.</span>
+                                </div>
                             </div>
                             <div style="display: flex; gap: 12px; align-items: flex-start;">
-                                <div style="width:28px; height:28px; border-radius:50%; background:rgba(0,176,255,0.1); color:#00b0ff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; flex-shrink:0;">3</div>
-                                <div><strong style="font-size: 0.9rem; display:block;">Validate Market Pilots</strong><span style="display:block; font-size:0.8rem; color:var(--text-muted);">Build low-cost B2B MVPs to validate customer willingness to pay before scaling capital.</span></div>
+                                <div style="width:28px; height:28px; border-radius:50%; background:#e0f2fe; color:#0369a1; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.85rem; flex-shrink:0; margin-top:2px;">3</div>
+                                <div>
+                                    <strong style="font-size: 0.9rem; display:block;">Phase 3: Validate Market Pilots (Days 61-90)</strong>
+                                    <span style="display:block; font-size:0.8rem; color:var(--text-muted); margin-top:2px;">Deploy low-code B2B MVPs to test customer demand and willingness to pay.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -129,35 +144,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="slide-grid-4">
                     <div class="slide-card-visual">
                         <div>
-                            <span class="slide-badge blue">JCS (Tech)</span>
-                            <h4 style="margin-top:10px;">IT Consulting</h4>
-                            <p style="margin-top:8px; line-height:1.4;">Custom software builds. Pivot custom dev contracts to international IT managed services retainers to reduce sales cycle overhead.</p>
+                            <span class="slide-badge blue">JCS (Technology)</span>
+                            <h4 style="margin-top:10px;">IT Consulting Core</h4>
+                            <p style="margin-top:8px; line-height:1.45; font-size:0.8rem;">
+                                Currently provides software dev and IT services. Pivots custom dev contracts to international cloud managed service retainers to secure higher margins and long-term predictable bookings.
+                            </p>
                         </div>
-                        <span class="slide-badge highlight">High Margin</span>
+                        <span class="slide-badge highlight" style="margin-top:12px;">High Margin Retainers</span>
                     </div>
                     <div class="slide-card-visual">
                         <div>
-                            <span class="slide-badge blue">Nature Grid</span>
-                            <h4 style="margin-top:10px;">Clean Energy</h4>
-                            <p style="margin-top:8px; line-height:1.4;">Residential solar installations. Shift solar install capacity to larger C&I contracts and O&M maintenance agreements.</p>
+                            <span class="slide-badge blue">Nature Grid (Energy)</span>
+                            <h4 style="margin-top:10px;">Solar Install Core</h4>
+                            <p style="margin-top:8px; line-height:1.45; font-size:0.8rem;">
+                                Currently installs residential solar arrays. Moves physical install capacity upmarket to larger C&I (Commercial & Industrial) contracts and recurring maintenance O&M service agreements.
+                            </p>
                         </div>
-                        <span class="slide-badge highlight">Recurring Yield</span>
+                        <span class="slide-badge highlight" style="margin-top:12px;">Recurring Yield Assets</span>
                     </div>
                     <div class="slide-card-visual">
                         <div>
-                            <span class="slide-badge blue">Aequalis</span>
-                            <h4 style="margin-top:10px;">Workforce</h4>
-                            <p style="margin-top:8px; line-height:1.4;">Executive recruitment search. Expand executive recruiting into high-volume specialized tech contract staffing retainers.</p>
+                            <span class="slide-badge blue">Aequalis (HR)</span>
+                            <h4 style="margin-top:10px;">Workforce Solutions</h4>
+                            <p style="margin-top:8px; line-height:1.45; font-size:0.8rem;">
+                                Provides executive recruitment search. Expands transaction recruitment footprint into high-volume specialized tech contract staffing retainers to smooth income cycles.
+                            </p>
                         </div>
-                        <span class="slide-badge highlight">Predictable Cash</span>
+                        <span class="slide-badge highlight" style="margin-top:12px;">Predictable Cash Retainers</span>
                     </div>
                     <div class="slide-card-visual">
                         <div>
                             <span class="slide-badge blue">Ventures</span>
                             <h4 style="margin-top:10px;">New Ventures</h4>
-                            <p style="margin-top:8px; line-height:1.4;">Emerging tech incubation. Productize repeatable custom integrations into SaaS templates and plug-in assets.</p>
+                            <p style="margin-top:8px; line-height:1.45; font-size:0.8rem;">
+                                Incubates emerging technologies. Harvests common consulting code libraries from JCS to build and productize reusable SaaS widgets, templates, and integration plug-ins.
+                            </p>
                         </div>
-                        <span class="slide-badge highlight">Scalable IP</span>
+                        <span class="slide-badge highlight" style="margin-top:12px;">Scalable IP Products</span>
                     </div>
                 </div>
             `
@@ -169,32 +192,32 @@ document.addEventListener('DOMContentLoaded', () => {
             content: `
                 <div class="slide-grid-4">
                     <div class="slide-card-visual">
-                        <h4>1. Markets</h4>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
-                            Focus geographic expansion on Tier-1/2 Indian solar grids, and the Middle East & Southeast Asian IT consulting corridors.
+                        <h4>1. Markets (Where)</h4>
+                        <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
+                            Target geographic expansion in regions with active pipelines: Tier-1/2 Indian solar grids, and Middle East & Southeast Asian corridors for IT managed services.
                         </p>
-                        <span class="slide-badge gold">Geography</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Target Geography</span>
                     </div>
                     <div class="slide-card-visual">
-                        <h4>2. Segments</h4>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
-                            Pivot from low-margin, high-churn SMB accounts upmarket to Mid-Market and B2B Enterprise clients.
+                        <h4>2. Segments (Who)</h4>
+                        <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
+                            Pivot client portfolios upmarket. Move away from low-margin, high-churn SMB accounts to Mid-Market corporate profiles and B2B Enterprise accounts where contract values justify customized delivery.
                         </p>
-                        <span class="slide-badge gold">Customer</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Customer Profiles</span>
                     </div>
                     <div class="slide-card-visual">
-                        <h4>3. Models</h4>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
-                            Transition group contracts away from transactional fees to subscription SaaS, monthly managed retainers, and O&M service agreements.
+                        <h4>3. Models (How)</h4>
+                        <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
+                            Transition from transactional models (one-off custom builds, single recruitment placement fee, panel installation fee) to recurring contracts (subscriptions, monthly retainers, O&M service agreements).
                         </p>
-                        <span class="slide-badge gold">Contract Type</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Contract Structure</span>
                     </div>
                     <div class="slide-card-visual">
-                        <h4>4. Capabilities</h4>
-                        <p style="font-size: 0.85rem; line-height: 1.4; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
-                            Leverage internal synergies: merge JCS software engineering with Aequalis recruiter access and Nature Grid solar site analytics.
+                        <h4>4. Capabilities (What)</h4>
+                        <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
+                            Exploit cross-business synergies. Combine JCS software engineering with Aequalis client networks (to distribute HR SaaS) and Nature Grid site data (to power energy management dashboards).
                         </p>
-                        <span class="slide-badge gold">Synergy IP</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Synergy IP</span>
                     </div>
                 </div>
             `
@@ -207,35 +230,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="slide-grid-4">
                     <div class="slide-card-visual">
                         <h4>Market Potential (40%)</h4>
-                        <p style="font-size:0.8rem; margin-top:6px; flex-grow: 1; line-height:1.4;">
-                            <strong>Market Attractiveness (20%):</strong> Evaluate TAM/SAM size, industry CAGR, and macro tailwinds.<br><br>
-                            <strong>Revenue Potential (20%):</strong> Validate customer willingness to pay, pricing power, and potential LTV.
+                        <p style="font-size:0.8rem; margin-top:6px; flex-grow: 1; line-height:1.45; color: var(--text-muted);">
+                            • <strong>Market Attractiveness (20%):</strong> Scope addressable TAM/SAM, historical and projected CAGR, and regional macro tailwinds.<br><br>
+                            • <strong>Revenue Potential (20%):</strong> Validate customer willingness to pay recurring premiums, lifetime value (LTV), and pricing power.
                         </p>
-                        <span class="slide-badge gold">Scale Lenses</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Scale Drivers</span>
                     </div>
                     <div class="slide-card-visual">
                         <h4>Strategic Fit (30%)</h4>
-                        <p style="font-size:0.8rem; margin-top:6px; flex-grow: 1; line-height:1.4;">
-                            <strong>Capability Fit (15%):</strong> Maximize use of existing JBG client databases, IP, or engineering assets.<br><br>
-                            <strong>Strategic Alignment (15%):</strong> Ensure long-term fit with brand equity and clean tech/digital vision.
+                        <p style="font-size:0.8rem; margin-top:6px; flex-grow: 1; line-height:1.45; color: var(--text-muted);">
+                            • <strong>JBG Capability Fit (15%):</strong> Maximize direct reuse of existing databases, code libraries, sales networks, or physical sites.<br><br>
+                            • <strong>Strategic Alignment (15%):</strong> Ensure long-term alignment with clean tech/digital vision and JBG brand equity.
                         </p>
-                        <span class="slide-badge gold">Synergy Lenses</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Synergy Drivers</span>
                     </div>
                     <div class="slide-card-visual">
                         <h4>Feasibility (20%)</h4>
-                        <p style="font-size:0.8rem; margin-top:6px; flex-grow: 1; line-height:1.4;">
-                            <strong>Competitive Intensity (10%):</strong> Map competitor density, pricing pressure, and barriers to entry.<br><br>
-                            <strong>Ease of Execution (10%):</strong> Scope development timeline, regulatory permitting, and technical complexity.
+                        <p style="font-size:0.8rem; margin-top:6px; flex-grow: 1; line-height:1.45; color: var(--text-muted);">
+                            • <strong>Competitive Intensity (10%):</strong> Map competitor density, pricing commoditization, and barriers to building differentiation.<br><br>
+                            • <strong>Ease of Execution (10%):</strong> Scope software development time-to-market, regulatory barriers, and team skills.
                         </p>
-                        <span class="slide-badge gold">Execution Lenses</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Execution Drivers</span>
                     </div>
                     <div class="slide-card-visual">
                         <h4>Risk & Capital (10%)</h4>
-                        <p style="font-size:0.8rem; margin-top:6px; flex-grow: 1; line-height:1.4;">
-                            <strong>Capital Efficiency (5%):</strong> Minimize upfront Capex requirements and cash payback cycles.<br><br>
-                            <strong>Risk Mitigation (5%):</strong> Hedge operational liabilities, regulatory policy changes, and dependencies.
+                        <p style="font-size:0.8rem; margin-top:6px; flex-grow: 1; line-height:1.45; color: var(--text-muted);">
+                            • <strong>Capital Efficiency (5%):</strong> Minimize upfront Capex requirements and cash payback timeline.<br><br>
+                            • <strong>Risk Mitigation (5%):</strong> Hedge operational liabilities, regulatory policy changes, and vendor dependencies.
                         </p>
-                        <span class="slide-badge gold">Control Lenses</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Control Drivers</span>
                     </div>
                 </div>
             `
@@ -248,13 +271,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="slide-grid-3">
                     <div class="slide-card-visual">
                         <h4>Core Leverage</h4>
-                        <p style="line-height:1.4;">Combine Aequalis Global's deep recruiting networks and client lists with JCS's custom software development capacity to build unique IP.</p>
-                        <span class="slide-badge">Assets Bound</span>
+                        <p style="line-height:1.5; font-size:0.85rem; color:var(--text-muted);">
+                            • <strong>Aequalis Network:</strong> Direct warm access to hundreds of corporate HR managers in India and SE Asia.<br><br>
+                            • <strong>JCS Engineering:</strong> Developer teams ready to write and deploy SaaS products.<br><br>
+                            • <strong>Domain Knowledge:</strong> Recruiter workflows used as a design blueprint.
+                        </p>
+                        <span class="slide-badge" style="margin-top:12px;">Assets Bound</span>
                     </div>
                     <div class="slide-card-visual" style="border-color: rgba(230, 25, 60, 0.2);">
-                        <h4>The Product</h4>
-                        <p style="line-height:1.4;">AI-powered applicant tracking and automated candidate screening platform built specifically for high-volume manufacturing and IT clients.</p>
-                        <span class="slide-badge highlight">HR Tech SaaS</span>
+                        <h4>The Product & Value</h4>
+                        <p style="line-height:1.5; font-size:0.85rem; color:var(--text-muted);">
+                            • <strong>AI-Powered Screening:</strong> Automated resumes parsing, candidate matching scoring, and calendar scheduling integrations.<br><br>
+                            • <strong>Go-To-Market Moat:</strong> Distributed directly to Aequalis recruitment clients, bypassing public ads spends.
+                        </p>
+                        <span class="slide-badge highlight" style="margin-top:12px;">HR Tech SaaS</span>
                     </div>
                     <div class="slide-card-visual">
                         <h4>Target Metric</h4>
@@ -262,6 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="num" style="color: var(--color-primary-hover); font-size: 2.8rem;">&gt; 4.0x</span>
                             <span class="label">LTV : CAC Ratio</span>
                         </div>
+                        <p style="font-size:0.75rem; color:var(--text-muted); text-align:center; margin-top:8px; line-height:1.3;">Enabled by warm distribution channels from Aequalis client base.</p>
                     </div>
                 </div>
             `
@@ -274,20 +305,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="slide-grid-3">
                     <div class="slide-card-visual">
                         <h4>Core Leverage</h4>
-                        <p style="line-height:1.4;">Combine Nature Grid's active physical solar panel installation client footprint with JCS's telemetry and cloud infrastructure software capacity.</p>
+                        <p style="line-height:1.5; font-size:0.85rem; color:var(--text-muted);">
+                            • <strong>Nature Grid Footprint:</strong> Physical commercial & industrial installations serving as hardware nodes.<br><br>
+                            • <strong>JCS Software Capability:</strong> Custom dashboard engineering, database management, and cloud architecture.<br><br>
+                            • <strong>Site Relationships:</strong> Warm client access.
+                        </p>
                         <span class="slide-badge">Assets Bound</span>
                     </div>
                     <div class="slide-card-visual" style="border-color: rgba(230, 25, 60, 0.2);">
-                        <h4>The Product</h4>
-                        <p style="line-height:1.4;">Real-time energy generation telemetry analytics dashboard, featuring predictive panel maintenance alerts and degradation reporting.</p>
-                        <span class="slide-badge highlight">IoT SaaS</span>
+                        <h4>The Product & Value</h4>
+                        <p style="line-height:1.5; font-size:0.85rem; color:var(--text-muted);">
+                            • <strong>IoT Analytics Portal:</strong> Real-time solar energy yield tracking, panel degradation charts, and savings calculations.<br><br>
+                            • <strong>O&M Retainers:</strong> Automates maintenance warnings and panel cleaning service dispatches.
+                        </p>
+                        <span class="slide-badge highlight">Solar Telemetry IoT</span>
                     </div>
                     <div class="slide-card-visual">
                         <h4>Target Metric</h4>
                         <div class="slide-metric-large" style="flex-grow:1; display:flex; justify-content:center; align-items:center;">
-                            <span class="num" style="color: #00b0ff; font-size: 2.8rem;">+30%</span>
+                            <span class="num" style="color: #0284c7; font-size: 2.8rem;">+30%</span>
                             <span class="label">Customer Lifetime Value</span>
                         </div>
+                        <p style="font-size:0.75rem; color:var(--text-muted); text-align:center; margin-top:8px; line-height:1.3;">Transforms transactional panel buyers into recurring energy subscribers.</p>
                     </div>
                 </div>
             `
@@ -300,12 +339,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="slide-compare-panel">
                     <div class="slide-compare-row">
                         <div class="slide-compare-label">BEFORE</div>
-                        <div class="slide-compare-val">100% custom software builds. Project delivery times are capped by developer billable hours, limiting scale and customer acquisition velocity.</div>
+                        <div class="slide-compare-val">
+                            <strong>100% Custom Services builds:</strong><br>
+                            Every client project requires unique coding from scratch. Project delivery times are capped by developer hours. Hard to scale, low utilization.
+                        </div>
                         <div class="slide-compare-stat">20% Margin</div>
                     </div>
                     <div class="slide-compare-row highlight">
                         <div class="slide-compare-label" style="color: var(--color-primary-hover);">AFTER</div>
-                        <div class="slide-compare-val">Pre-built Salesforce integrations, ERP API middleware templates, and repeatable CRM workflow configuration plugins.</div>
+                        <div class="slide-compare-val">
+                            <strong>Reusable configuration templates & plugins:</strong><br>
+                            Pre-built Salesforce integration modules, ERP API middleware layouts, and CRM plugins. Decouples consulting revenues from developer headcount.
+                        </div>
                         <div class="slide-compare-stat" style="color: var(--success-color);">45%+ Margin</div>
                     </div>
                 </div>
@@ -319,43 +364,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="slide-grid-5">
                     <div class="slide-card-visual">
                         <h4>1. Market</h4>
-                        <p style="font-size: 0.8rem; line-height: 1.4; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
-                            <strong>Focus:</strong> Validate TAM size, segment growth CAGR, and regulatory policies.<br><br>
-                            <strong>Gate:</strong> TAM > $500M; CAGR > 15%.
+                        <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
+                            <strong>Focus:</strong> Validate addressable TAM/SAM, segment CAGRs, and regional policy trends (e.g. net-metering laws).<br><br>
+                            <strong>Gate:</strong> TAM > $500M; segment CAGR > 15%.
                         </p>
-                        <span class="slide-badge gold">Size Gate</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Size Gate</span>
                     </div>
                     <div class="slide-card-visual">
                         <h4>2. Customer</h4>
-                        <p style="font-size: 0.8rem; line-height: 1.4; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
-                            <strong>Focus:</strong> Validate core pain points, budgets, and willingness to pay.<br><br>
-                            <strong>Gate:</strong> 30+ discovery interviews.
+                        <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
+                            <strong>Focus:</strong> Run value-in-use validation and budget willingness to pay to map customer pain points.<br><br>
+                            <strong>Gate:</strong> Complete 30+ discovery interviews.
                         </p>
-                        <span class="slide-badge gold">Discovery</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Discovery</span>
                     </div>
                     <div class="slide-card-visual">
                         <h4>3. Competitor</h4>
-                        <p style="font-size: 0.8rem; line-height: 1.4; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
-                            <strong>Focus:</strong> Map competitor pricing models, feature sets, and market shares.<br><br>
-                            <strong>Gate:</strong> Moat & differentiation defined.
+                        <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
+                            <strong>Focus:</strong> Map competitor pricing models, features, and market share density to identify gaps.<br><br>
+                            <strong>Gate:</strong> Clear JBG differentiation moat defined.
                         </p>
-                        <span class="slide-badge gold">Market Moat</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Market Moat</span>
                     </div>
                     <div class="slide-card-visual">
                         <h4>4. Capability</h4>
-                        <p style="font-size: 0.8rem; line-height: 1.4; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
-                            <strong>Focus:</strong> Audit internal developer workload and sales execution readiness.<br><br>
-                            <strong>Gate:</strong> Team workload < 85% capacity.
+                        <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
+                            <strong>Focus:</strong> Audit developer bandwidth, sales experience, and hiring timelines for new ventures.<br><br>
+                            <strong>Gate:</strong> Core team workload capped < 85%.
                         </p>
-                        <span class="slide-badge gold">Feasibility</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Feasibility</span>
                     </div>
                     <div class="slide-card-visual">
                         <h4>5. Economics</h4>
-                        <p style="font-size: 0.8rem; line-height: 1.4; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
-                            <strong>Focus:</strong> Model initial LTV, CAC, payback, and Capex requirements.<br><br>
-                            <strong>Gate:</strong> LTV:CAC > 3x; Payback < 12m.
+                        <p style="font-size: 0.8rem; line-height: 1.45; color: var(--text-muted); margin-top: 8px; flex-grow: 1;">
+                            <strong>Focus:</strong> Project LTV, CAC, payback cycles, and initial working capital/Capex demands.<br><br>
+                            <strong>Gate:</strong> LTV:CAC > 3.0x; Payback < 12 months.
                         </p>
-                        <span class="slide-badge gold">Finance Gate</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Finance Gate</span>
                     </div>
                 </div>
             `
@@ -368,21 +413,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="slide-grid-2">
                     <div class="slide-card-visual">
                         <h4>Inbound Demand Generation</h4>
-                        <p style="line-height:1.5; font-size:0.85rem; flex-grow: 1; margin-top:8px;">
-                            • <strong>Authority Content:</strong> Publish high-value whitepapers, market studies, and case studies to capture search traffic.<br>
-                            • <strong>Interactive ROI Tools:</strong> Embed savings estimators (e.g. Solar panels payback calculators) to convert high-intent site visitors.<br>
+                        <p style="line-height:1.5; font-size:0.85rem; flex-grow: 1; margin-top:8px; color: var(--text-muted);">
+                            • <strong>Authority Content:</strong> Publish high-value whitepapers, market studies, and case studies to capture search traffic.<br><br>
+                            • <strong>Interactive ROI Tools:</strong> Embed savings estimators (e.g. Solar panels payback calculators) to convert high-intent site visitors.<br><br>
                             • <strong>CRM Lead Scoring:</strong> Deploy automated lead tracking and score opportunities before routing to sales agents.
                         </p>
-                        <span class="slide-badge gold">Marketing Pull</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Marketing Pull</span>
                     </div>
                     <div class="slide-card-visual">
                         <h4>Unified B2B Sales Playbook</h4>
-                        <p style="line-height:1.5; font-size:0.85rem; flex-grow: 1; margin-top:8px;">
-                            • <strong>Sales Force Cross-Training:</strong> Cross-train JCS tech consulting sales teams and Aequalis Global recruitment sales reps.<br>
-                            • <strong>Synergy Lead Sourcing:</strong> Train Aequalis reps to spot tech development gaps, and JCS consultants to spot IT recruiter staffing gaps.<br>
+                        <p style="line-height:1.5; font-size:0.85rem; flex-grow: 1; margin-top:8px; color: var(--text-muted);">
+                            • <strong>Sales Force Cross-Training:</strong> Cross-train JCS tech consulting sales teams and Aequalis Global recruitment sales reps.<br><br>
+                            • <strong>Synergy Lead Sourcing:</strong> Train Aequalis reps to spot tech development gaps, and JCS consultants to spot IT recruiter staffing gaps.<br><br>
                             • <strong>Shared Commission Pools:</strong> Incentivize cross-business line lead generation via split referral bonuses.
                         </p>
-                        <span class="slide-badge gold">Sales Push</span>
+                        <span class="slide-badge gold" style="margin-top:12px;">Sales Push</span>
                     </div>
                 </div>
             `
@@ -396,32 +441,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="slide-card-visual" style="border-top: 4px solid var(--color-primary);">
                         <span class="slide-badge highlight" style="margin-top:0; margin-bottom: 8px;">Days 1–30</span>
                         <h4 style="margin-bottom:6px;">Phase 1: Diagnose</h4>
-                        <p style="font-size:0.8rem; line-height:1.4; flex-grow:1;">
-                            • Audit active margin profiles, revenue concentration risks, and client dependencies across units.<br>
-                            • Establish the unified JBG Business Health Dashboard.<br>
-                            • Assess technical builder bandwidth and project delivery delays.
+                        <p style="font-size:0.8rem; line-height:1.45; flex-grow:1; color: var(--text-muted);">
+                            • <strong>Operational Audit:</strong> Review margin profiles, revenue concentration risks, and client dependencies across JCS, Nature Grid, and Aequalis.<br><br>
+                            • <strong>System Baseline:</strong> Deploy the Group Business Health Dashboard to monitor cash conversion cycles.<br><br>
+                            • <strong>Bandwidth check:</strong> Audit developer workloads and capacity.
                         </p>
-                        <span class="slide-badge">Operational Audit</span>
+                        <span class="slide-badge" style="margin-top:12px;">Operational Audit</span>
                     </div>
                     <div class="slide-card-visual" style="border-top: 4px solid var(--accent-gold);">
                         <span class="slide-badge highlight" style="margin-top:0; margin-bottom: 8px;">Days 31–60</span>
                         <h4 style="margin-bottom:6px;">Phase 2: Discover</h4>
-                        <p style="font-size:0.8rem; line-height:1.4; flex-grow:1;">
-                            • Gather and document new growth opportunities from all business units into a central repository.<br>
-                            • Score all opportunities using the 8-factor prioritization scorecard.<br>
-                            • Select top 3 synergetic opportunities for development.
+                        <p style="font-size:0.8rem; line-height:1.45; flex-grow:1; color: var(--text-muted);">
+                            • <strong>Idea Sourcing:</strong> Gather growth proposals from all business units into a central repository.<br><br>
+                            • <strong>Matrix Scoring:</strong> Run opportunities through the 8-factor prioritization scorecard.<br><br>
+                            • <strong>Portfolio Selection:</strong> Pick the top 3 synergetic pilots for development.
                         </p>
-                        <span class="slide-badge">Pipeline Prioritizer</span>
+                        <span class="slide-badge" style="margin-top:12px;">Pipeline Prioritizer</span>
                     </div>
-                    <div class="slide-card-visual" style="border-top: 4px solid #00b0ff;">
+                    <div class="slide-card-visual" style="border-top: 4px solid #0284c7;">
                         <span class="slide-badge highlight" style="margin-top:0; margin-bottom: 8px;">Days 61–90</span>
                         <h4 style="margin-bottom:6px;">Phase 3: Validate</h4>
-                        <p style="font-size:0.8rem; line-height:1.4; flex-grow:1;">
-                            • Develop low-code landing pages and basic product mockups to test demand.<br>
-                            • Execute 30+ B2B buyer validation interviews.<br>
-                            • Secure early letter-of-intent (LOI) signing from warm trial accounts.
+                        <p style="font-size:0.8rem; line-height:1.45; flex-grow:1; color: var(--text-muted);">
+                            • <strong>Low-Code Prototyping:</strong> Launch mockups and B2B landing pages to test interest.<br><br>
+                            • <strong>Customer Validation:</strong> Conduct 30+ discovery interviews with target buyers.<br><br>
+                            • <strong>Pre-Sales:</strong> Secure early letter-of-intent (LOI) signings from warm trial accounts.
                         </p>
-                        <span class="slide-badge">Market Verification</span>
+                        <span class="slide-badge" style="margin-top:12px;">Market Verification</span>
                     </div>
                 </div>
             `
@@ -437,37 +482,40 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="num">ROIC</span>
                             <span class="label">Group Health</span>
                         </div>
-                        <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-top:8px; line-height: 1.4; flex-grow:1;">
-                            Track total group portfolio revenue growth %, target business unit EBITDA margins, and Return on Invested Capital (ROIC) targets.
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px; line-height: 1.45; flex-grow:1;">
+                            • <strong>Revenue growth %:</strong> Target sustainable portfolio growth.<br><br>
+                            • <strong>EBITDA margin expansion:</strong> Monitor unit margins.<br><br>
+                            • <strong>ROIC:</strong> Maximize group return on invested capital.
                         </p>
-                        <span class="slide-badge">Portfolio Gate</span>
+                        <span class="slide-badge" style="margin-top:12px;">Portfolio Gate</span>
                     </div>
                     <div class="slide-card-visual">
                         <div class="slide-metric-large">
                             <span class="num">&gt; 3.0x</span>
                             <span class="label">LTV : CAC</span>
                         </div>
-                        <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-top:8px; line-height: 1.4; flex-grow:1;">
-                            Enforce unit viability standards. Track CAC payback period (target < 12 months) and Customer Lifetime Value (LTV) ratios.
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px; line-height: 1.45; flex-grow:1;">
+                            • <strong>LTV:CAC ratio:</strong> Enforce unit economic viability standards.<br><br>
+                            • <strong>Payback cycle:</strong> Target cash payback in &lt; 12 months.<br><br>
+                            • <strong>Churn Rate:</strong> Monitor subscription cancellations.
                         </p>
-                        <span class="slide-badge">Commercial Gate</span>
+                        <span class="slide-badge" style="margin-top:12px;">Commercial Gate</span>
                     </div>
                     <div class="slide-card-visual" style="border-color: rgba(230, 25, 60, 0.3); background: rgba(230, 25, 60, 0.02);">
                         <div class="slide-metric-large">
                             <span class="num" style="color: var(--color-primary-hover);">&gt; 70%</span>
                             <span class="label">Early-Killed Ideas</span>
                         </div>
-                        <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-top:8px; line-height: 1.4; flex-grow:1;">
-                            Enforce innovation gate metrics. Rate of projects killed early at research phases to prevent capital exhaustion.
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:8px; line-height: 1.45; flex-grow:1;">
+                            • <strong>Validation velocity:</strong> Track time to terminate unviable pilots.<br><br>
+                            • <strong>Fail-fast rate:</strong> Terminate &gt; 70% of ideas at research gates to preserve capital.
                         </p>
-                        <span class="slide-badge highlight">Governance Gate</span>
+                        <span class="slide-badge highlight" style="margin-top:12px;">Governance Gate</span>
                     </div>
                 </div>
             `
         }
-    ];
-
-    let currentSlideIndex = 0;
+    ];let currentSlideIndex = 0;
 
     const activeSlideContainer = document.getElementById('active-slide-container');
     const slideNumIndicator = document.getElementById('slide-num-indicator');
