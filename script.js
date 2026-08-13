@@ -704,7 +704,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2>${slide.title}</h2>
                     <div class="slide-subtitle">${slide.subtitle}</div>
                 </div>
-                <div class="slide-header-logo">JBG GPE Strategy</div>
+                <div class="slide-header-logo" style="display:flex; align-items:center; opacity:0.9;">
+                    <img src="jithvar_logo.png" alt="Jithvar Logo" style="height: 24px; width: auto; display: block;">
+                </div>
             </div>
             <div class="slide-body">
                 ${slide.content}
